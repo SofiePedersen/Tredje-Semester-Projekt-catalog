@@ -4,7 +4,8 @@
   <header>
     <div class="header">
     <h1 class="header__logo">Faraos Cigarer</h1>
-    <input class="header__search" type="text" placeholder="søg" />
+    <p class="header__icon">test</p>
+    <input class="header__input" type="text" placeholder="søg" />
     </div>
   </header>
 </template>
@@ -13,6 +14,7 @@
 .header{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .header__logo {
@@ -22,8 +24,16 @@
     font-family: 'Boogaloo';
 }
 
-.search__header {
+.header__input {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.header__icon {
+    display: flex;
+    flex-wrap: nowrap;
 }
 </style>
