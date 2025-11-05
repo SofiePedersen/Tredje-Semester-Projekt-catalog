@@ -10,4 +10,12 @@
 body {
     display: flex;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-family: 'Boogaloo';
+}
 </style>
