@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 
 const currentIndex = ref(0);
 const totalSlides = 6;
-const isPaused = ref(false); // <-- Holder styr på pause
+const isPaused = ref(false);
 let interval = null;
 
 // Skift til næste/forrige slide
@@ -45,30 +45,44 @@ onUnmounted(() => {
 <template>
   <div class="slideshow">
     <!-- Slides -->
-    <div v-for="n in totalSlides" :key="n" v-show="currentIndex === n - 1">
-      <img
-        :src="`../assets/image/mobil_slideshow_${n}.webp`"
-        :alt="`Billede ${n}`"
-      />
+    <div v-show="currentIndex === 0">
+      <img src="../assets/image/mobil_slideshow_1.webp" alt="Billede 1" />
+    </div>
+    <div v-show="currentIndex === 1">
+      <img src="../assets/image/mobil_slideshow_2.webp" alt="Billede 2" />
+    </div>
+    <div v-show="currentIndex === 2">
+      <img src="../assets/image/mobil_slideshow_3.webp" alt="Billede 3" />
+    </div>
+    <div v-show="currentIndex === 3">
+      <img src="../assets/image/mobil_slideshow_4.webp" alt="Billede 4" />
+    </div>
+    <div v-show="currentIndex === 4">
+      <img src="../assets/image/mobil_slideshow_5.webp" alt="Billede 5" />
+    </div>
+    <div v-show="currentIndex === 5">
+      <img src="../assets/image/mobil_slideshow_6.webp" alt="Billede 6" />
     </div>
 
     <!-- Navigationsknapper -->
     <div class="controls">
-      <button @click="nextSlide(-1)">&#8592;</button>
+      <button @click="nextSlide(-1)">❮</button>
       <!-- Venstre pil -->
       <button @click="togglePause">
         {{ isPaused ? "▶️" : "⏸️" }}
-        <!-- Play/Pause ikon -->
       </button>
-      <button @click="nextSlide(1)">&#8594;</button>
+      <button @click="nextSlide(1)">❯</button>
       <!-- Højre pil -->
     </div>
 
     <!-- Dots -->
     <div class="dots">
-      <button v-for="n in totalSlides" :key="n" @click="goToSlide(n - 1)">
-        {{ n }}
-      </button>
+      <button @click="goToSlide(0)">1</button>
+      <button @click="goToSlide(1)">2</button>
+      <button @click="goToSlide(2)">3</button>
+      <button @click="goToSlide(3)">4</button>
+      <button @click="goToSlide(4)">5</button>
+      <button @click="goToSlide(5)">6</button>
     </div>
   </div>
 </template>
