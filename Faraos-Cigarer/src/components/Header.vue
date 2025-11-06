@@ -53,7 +53,6 @@ const menuItems = [
   position: fixed;
   top: 0;
   left: -500px;
-  color: white;
   font-family: 'play';
   display: flex;
   flex-direction: column;
@@ -75,7 +74,7 @@ li {
 }
 
 a:link, a:visited, a:hover, a:active { 
-    color: #081907; 
+    color: white; 
     text-decoration: none;
 }
 
