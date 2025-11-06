@@ -2,7 +2,8 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const currentIndex = ref(0);
-const totalSlides = 3;
+const totalSlides = 6;
+const isPaused = ref(false); // <-- Holder styr på pause
 let interval = null;
 
 // Skift til næste/forrige slide
@@ -15,11 +16,25 @@ function goToSlide(index) {
   currentIndex.value = index;
 }
 
-// Automatisk skift hvert 5. sekund
-onMounted(() => {
+// Toggle pause/play
+function togglePause() {
+  isPaused.value = !isPaused.value;
+  if (isPaused.value) {
+    clearInterval(interval);
+  } else {
+    startInterval();
+  }
+}
+
+// Start automatisk interval
+function startInterval() {
   interval = setInterval(() => {
     nextSlide(1);
-  }, 5000);
+  }, 10000);
+}
+
+onMounted(() => {
+  startInterval();
 });
 
 onUnmounted(() => {
@@ -28,31 +43,32 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div>
-    <!-- Slide 1 -->
-    <div v-show="currentIndex === 0">
-      <img src="../assets/image/mobil_slideshow_1.webp" alt="Billede 1" />
+  <div class="slideshow">
+    <!-- Slides -->
+    <div v-for="n in totalSlides" :key="n" v-show="currentIndex === n - 1">
+      <img
+        :src="`../assets/image/mobil_slideshow_${n}.webp`"
+        :alt="`Billede ${n}`"
+      />
     </div>
 
-    <!-- Slide 2 -->
-    <div v-show="currentIndex === 1">
-      <img src="../assets/image/mobil_slideshow_2.webp" alt="Billede 2" />
+    <!-- Navigationsknapper -->
+    <div class="controls">
+      <button @click="nextSlide(-1)">&#8592;</button>
+      <!-- Venstre pil -->
+      <button @click="togglePause">
+        {{ isPaused ? "▶️" : "⏸️" }}
+        <!-- Play/Pause ikon -->
+      </button>
+      <button @click="nextSlide(1)">&#8594;</button>
+      <!-- Højre pil -->
     </div>
-
-    <!-- Slide 3 -->
-    <div v-show="currentIndex === 2">
-      <img src="../assets/image/mobil_slideshow_3.webp" alt="Billede 3" />
-    </div>
-
-    <!-- Knapper -->
-    <button @click="nextSlide(-1)">Forrige</button>
-    <button @click="nextSlide(1)">Næste</button>
 
     <!-- Dots -->
-    <div>
-      <button @click="goToSlide(0)">1</button>
-      <button @click="goToSlide(1)">2</button>
-      <button @click="goToSlide(2)">3</button>
+    <div class="dots">
+      <button v-for="n in totalSlides" :key="n" @click="goToSlide(n - 1)">
+        {{ n }}
+      </button>
     </div>
   </div>
 </template>
