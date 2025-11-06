@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+</script>
 
 <template>
   <header>
@@ -7,7 +10,7 @@
       <div class="header__controls">
         <p class="header__icon">test</p>
         <input class="header__input" type="text" placeholder="søg" />
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button><FontAwesomeIcon :icon="faMagnifyingGlass"/></button>
         <p class="header__icon">test</p>
       </div>
     </div>
