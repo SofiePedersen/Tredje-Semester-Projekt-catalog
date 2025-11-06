@@ -4,7 +4,6 @@ import Header from "./components/Header.vue";
 
 <template>
   <Header></Header>
-  <Slideshow></Slideshow>
 </template>
 
 <style scoped></style>
