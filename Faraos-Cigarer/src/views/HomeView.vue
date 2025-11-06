@@ -4,6 +4,6 @@ import Slideshow from "../components/Slideshow.vue";
 
 <template>
   <main>
-    <Slideshow></Slideshow>
+    <Slideshow />
   </main>
 </template>

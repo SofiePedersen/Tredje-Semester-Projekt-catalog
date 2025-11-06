@@ -1,68 +1,58 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
-const slideIndex = ref(1);
-let slides = [];
-let dots = [];
-let autoSlideInterval = null;
+const currentIndex = ref(0);
+const totalSlides = 3;
+let interval = null;
 
-function showSlides(n) {
-  if (n > slides.length) slideIndex.value = 1;
-  if (n < 1) slideIndex.value = slides.length;
-
-  slides.forEach((slide) => (slide.style.display = "none"));
-  dots.forEach((dot) => dot.classList.remove("active"));
-
-  slides[slideIndex.value - 1].style.display = "block";
-  dots[slideIndex.value - 1].classList.add("active");
+// Skift til næste/forrige slide
+function nextSlide(step = 1) {
+  currentIndex.value = (currentIndex.value + step + totalSlides) % totalSlides;
 }
 
-function plusSlides(n) {
-  showSlides(slideIndex.value + n);
+// Skift direkte til et bestemt slide
+function goToSlide(index) {
+  currentIndex.value = index;
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex.value = n));
-}
-
+// Automatisk skift hvert 5. sekund
 onMounted(() => {
-  slides = Array.from(document.getElementsByClassName("mySlides"));
-  dots = Array.from(document.getElementsByClassName("dot"));
-  showSlides(slideIndex.value);
-  autoSlideInterval = setInterval(() => {
-    plusSlides(1);
+  interval = setInterval(() => {
+    nextSlide(1);
   }, 5000);
+});
+
+onUnmounted(() => {
+  clearInterval(interval);
 });
 </script>
 
 <template>
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="../assets/image/mobil_slideshow_1.webp" />
+  <div>
+    <!-- Slide 1 -->
+    <div v-show="currentIndex === 0">
+      <img src="../assets/image/mobil_slideshow_1.webp" alt="Billede 1" />
     </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="../assets/image/mobil_slideshow_2.webp" />
+    <!-- Slide 2 -->
+    <div v-show="currentIndex === 1">
+      <img src="../assets/image/mobil_slideshow_2.webp" alt="Billede 2" />
     </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="../assets/image/mobil_slideshow_3.webp" />
+    <!-- Slide 3 -->
+    <div v-show="currentIndex === 2">
+      <img src="../assets/image/mobil_slideshow_3.webp" alt="Billede 3" />
     </div>
 
-    <a class="prev" @click="plusSlides(-1)">❮</a>
-    <a class="next" @click="plusSlides(1)">❯</a>
-  </div>
+    <!-- Knapper -->
+    <button @click="nextSlide(-1)">Forrige</button>
+    <button @click="nextSlide(1)">Næste</button>
 
-  <br />
-
-  <div style="text-align: center">
-    <span class="dot" @click="currentSlide(1)"></span>
-    <span class="dot" @click="currentSlide(2)"></span>
-    <span class="dot" @click="currentSlide(3)"></span>
+    <!-- Dots -->
+    <div>
+      <button @click="goToSlide(0)">1</button>
+      <button @click="goToSlide(1)">2</button>
+      <button @click="goToSlide(2)">3</button>
+    </div>
   </div>
 </template>
-
-<style scoped></style>
