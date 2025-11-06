@@ -26,7 +26,6 @@ function togglePause() {
   }
 }
 
-// Start automatisk interval
 function startInterval() {
   interval = setInterval(() => {
     nextSlide(1);
@@ -44,7 +43,6 @@ onUnmounted(() => {
 
 <template>
   <div class="slideshow">
-    <!-- Slides -->
     <div v-show="currentIndex === 0">
       <img src="../assets/image/mobil_slideshow_1.webp" alt="Billede 1" />
     </div>
@@ -64,18 +62,6 @@ onUnmounted(() => {
       <img src="../assets/image/mobil_slideshow_6.webp" alt="Billede 6" />
     </div>
 
-    <!-- Navigationsknapper -->
-    <div class="controls">
-      <button @click="nextSlide(-1)">❮</button>
-      <!-- Venstre pil -->
-      <button @click="togglePause">
-        {{ isPaused ? "▶️" : "⏸️" }}
-      </button>
-      <button @click="nextSlide(1)">❯</button>
-      <!-- Højre pil -->
-    </div>
-
-    <!-- Dots -->
     <div class="dots">
       <button @click="goToSlide(0)">1</button>
       <button @click="goToSlide(1)">2</button>
@@ -83,6 +69,14 @@ onUnmounted(() => {
       <button @click="goToSlide(3)">4</button>
       <button @click="goToSlide(4)">5</button>
       <button @click="goToSlide(5)">6</button>
+    </div>
+
+    <div class="controls">
+      <button @click="nextSlide(-1)">❮</button>
+      <button @click="togglePause">
+        {{ isPaused ? "▶️" : "⏸️" }}
+      </button>
+      <button @click="nextSlide(1)">❯</button>
     </div>
   </div>
 </template>
