@@ -142,9 +142,9 @@ onUnmounted(() => {
   max-width: 600px;
   margin: 0 auto;
   background-color: #000000;
-  padding: 10px;
-  padding-left: 40px;
+  padding: 10px 0 10px 40px;
   display: flex;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 </style>
