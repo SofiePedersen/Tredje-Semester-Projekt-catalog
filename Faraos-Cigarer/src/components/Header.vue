@@ -3,37 +3,45 @@
 <template>
   <header>
     <div class="header">
-    <h1 class="header__logo">Faraos Cigarer</h1>
-    <p class="header__icon">test</p>
-    <input class="header__input" type="text" placeholder="søg" />
+        <img class="header__logo" src="../assets/image/faraos-logo.webp" alt="Faraos Cigarer Logo" />
+      <div class="header__controls">
+        <p class="header__icon">test</p>
+        <input class="header__input" type="text" placeholder="søg" />
+        <p class="header__icon">test</p>
+      </div>
     </div>
   </header>
 </template>
 
 <style scoped>
-.header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.header__controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  margin-top: 10px;
 }
 
 .header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Boogaloo';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Boogaloo';
+  margin-bottom: 20px;
 }
 
 .header__input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    width: 50%;
+  width: 50%;
 }
 
 .header__icon {
-    display: flex;
-    flex-wrap: nowrap;
+  white-space: nowrap;
 }
 </style>
