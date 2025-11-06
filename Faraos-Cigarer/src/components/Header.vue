@@ -7,7 +7,11 @@ const isMenuActive = ref(false);
 const togglemenu = () => {
   isMenuActive.value = !isMenuActive.value; 
 };
+const refreshPage = () => {
+  window.location.reload();
+}
 
+// yo mr scrummy her, de her elementer skal lige opdateres når vi har sat routes op for lige nu kan de ikke load den nye side da det SKAL matche før det er aktivt, men det skulle virke
 const menuItems = [
   { name: "Hjem", link: "/" },
   { name: "Cigarer", link: "/cigarer" },
@@ -23,10 +27,11 @@ const menuItems = [
     <div class="header">
         <img class="header__logo" src="../assets/image/faraos-logo.webp" alt="Faraos Cigarer Logo" />
       <div class="header__controls">
-        <nav class="off-screen-menu" :class="{ active: isMenuActive }">
+        <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <ul id="menu">
-           <li v-for="item in menuItems" :key="item.name">
-              <a :href="item.link">{{ item.name }}</a>
+           <li class="header__hammenu__list" v-for="item in menuItems" :key="item.name">
+              <!--<a class="header__hammenu__a" :href="item.link">{{ item.name }}</a>-->
+              <router-link class="header__hammenu__searchtag" :to="item.link" @click="refreshPage">{{ item.name }}</router-link>
             </li>             
           </ul>
         </nav>
@@ -69,11 +74,12 @@ const menuItems = [
     font-family: "play";
 }
 
-li {
+.header__hammenu__list {
     margin: 25% 0;
 }
 
-a:link, a:visited, a:hover, a:active { 
+
+.header__hammenu__searchtag:link, .header__hammenu__searchtag:visited, .header__hammenu__searchtag:hover, .header__hammenu__searchtag:active { 
     color: white; 
     text-decoration: none;
 }
@@ -82,11 +88,11 @@ a:link, a:visited, a:hover, a:active {
     left: 0;
 }
 
-nav {
+#hammenu__nav {
     padding: 1rem;
     display: flex;
     align-items: center;
-    background-color: #fffcf3;
+    background-color: #000000;
 }
 
 .ham-menu {
