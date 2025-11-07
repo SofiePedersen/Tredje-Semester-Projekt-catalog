@@ -1,11 +1,11 @@
 <script setup>
 import Slideshow from "../components/Slideshow.vue";
-import Promosection from "@/components/Promosection.vue";
+import SectionTitle from "@/components/SectionTitle.vue";
 </script>
 
 <template>
   <main>
     <Slideshow />
-    <Promosection />
+    <SectionTitle />
   </main>
 </template>
