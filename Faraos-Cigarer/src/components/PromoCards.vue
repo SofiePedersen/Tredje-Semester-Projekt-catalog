@@ -12,7 +12,8 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/main.scss";
 .category-card {
   text-align: center;
 }
@@ -25,9 +26,9 @@ defineProps({
 
 .category-card button {
   margin-top: 0.5rem;
-  background-color: #0e0f11;
-  color: #efd17a;
-  font-family: "Boogaloo";
+  background-color: $color-anubis-black;
+  color: $color-pharaos-gold;
+  font-family: $font-boogaloo;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -35,7 +36,7 @@ defineProps({
 }
 
 .category-card button:hover {
-  background-color: #efd17a;
-  color: #0e0f11;
+  background-color: $color-pharaos-gold;
+  color: $color-anubis-black;
 }
 </style>

@@ -92,7 +92,8 @@ onUnmounted(() => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/main.scss";
 .slideshow {
   position: relative;
   width: 100%;
@@ -118,7 +119,7 @@ onUnmounted(() => {
 .dots button {
   width: 12px;
   height: 12px;
-  background-color: #ffffff;
+  background-color: $color-newspaper-white;
   border-color: #000000;
   border-width: 1px;
   border-style: solid;
@@ -131,9 +132,9 @@ onUnmounted(() => {
 }
 
 .controls button {
-  background-color: #efd17a;
+  background-color: $color-pharaos-gold;
   color: #000000;
-  border-color: #efd17a;
+  border-color: $color-pharaos-gold;
   cursor: pointer;
 }
 
