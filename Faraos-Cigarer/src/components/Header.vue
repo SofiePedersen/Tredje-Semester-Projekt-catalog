@@ -11,9 +11,9 @@ const togglemenu = () => {
 
 // yo mr scrummy her, de her elementer skal lige opdateres når vi har sat routes op for lige nu kan de ikke load den nye side da det SKAL matche før det er aktivt, men det skulle virke
 const menuItems = [
-  { name: "hjem", link: "/" },
+  { name: "Hjem", link: "/" },
   { name: "Butikker", link: "/Butikker" },
-  { name: "Åbningstider", link: "/Aabningstider" },
+  { name: "Åbningstider", link: "/Information" },
 ];
 
 </script>
