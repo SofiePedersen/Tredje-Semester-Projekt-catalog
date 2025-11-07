@@ -63,6 +63,7 @@ const menuItems = [
 </template>
 
 <style lang="scss" scoped>
+@import '../assets/main.scss';
 
 .off-screen-menu {
   background-color: #000000;
