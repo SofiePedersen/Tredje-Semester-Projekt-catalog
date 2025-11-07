@@ -1,16 +1,16 @@
-<template>
-  <div class="category-card">
-    <img :src="image" :alt="title" />
-    <button>{{ title }}</button>
-  </div>
-</template>
-
 <script setup>
 defineProps({
   image: String,
   title: String,
 });
 </script>
+
+<template>
+  <div class="category-card">
+    <img :src="image" :alt="title" />
+    <button>{{ title }}</button>
+  </div>
+</template>
 
 <style scoped>
 .category-card {
