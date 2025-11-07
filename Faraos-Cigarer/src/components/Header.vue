@@ -1,6 +1,7 @@
 <script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { onMounted } from "vue";
@@ -48,7 +49,9 @@ const menuItems = [
         </div>
         <input class="header__input" type="text" placeholder="søg" />
         <button><FontAwesomeIcon :icon="faMagnifyingGlass"/></button>
-        <p class="header__icon">test</p>
+        <div class="header__icon">
+        <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" /></button>
+        </div>
       </div>
     </div>
   </header>
@@ -178,5 +181,18 @@ const menuItems = [
 
 .header__icon {
   white-space: nowrap;
+  background-color: #000000;
+}
+
+.header__icon__basket {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  position: relative;
+  background-color: black;
+  color: white;
+  font-size: 28px;;
 }
 </style>
