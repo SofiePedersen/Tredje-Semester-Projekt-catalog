@@ -7,8 +7,10 @@ defineProps({
 
 <template>
   <div class="category-card">
-    <img :src="image" :alt="title" />
-    <button>{{ title }}</button>
+    <div class="image-wrapper">
+      <img :src="image" :alt="title" />
+      <button>{{ title }}</button>
+    </div>
   </div>
 </template>
 
@@ -18,21 +20,28 @@ defineProps({
   text-align: center;
 }
 
-.category-card img {
+.image-wrapper {
+  position: relative;
   width: 100%;
+}
+
+.category-card img {
+  width: 400px;
   height: auto;
-  border-radius: 10px;
+  object-fit: cover;
 }
 
 .category-card button {
-  margin-top: 0.5rem;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
   background-color: $color-anubis-black;
   color: $color-pharaos-gold;
   font-family: $font-boogaloo;
   border: none;
-  padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 .category-card button:hover {
