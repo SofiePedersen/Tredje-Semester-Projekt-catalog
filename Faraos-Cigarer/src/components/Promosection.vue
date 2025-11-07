@@ -1,5 +1,7 @@
 <script setup></script>
 
-<template></template>
+<template>
+  <h2 class="section_titel">UDFORSK FARAOS UNIVERS</h2>
+</template>
 
 <style scoped></style>
