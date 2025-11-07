@@ -221,6 +221,7 @@ const menuItems = [
 .header__icon__basket {
   height: 50px;
   width: 50px;
+  padding-top: 5px;
   margin-left: auto;
   margin-right: auto;
   border: none;
