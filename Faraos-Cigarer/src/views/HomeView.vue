@@ -1,11 +1,12 @@
 <script setup>
 import Slideshow from "../components/Slideshow.vue";
-import SectionTitle from "@/components/SectionTitle.vue";
+import Promosection from "@/components/PromoSection.vue";
 </script>
 
 <template>
   <main>
     <Slideshow />
-    <SectionTitle />
+    <h2>UDFORSK FARAOS UNIVERS</h2>
+    <Promosection />
   </main>
 </template>
