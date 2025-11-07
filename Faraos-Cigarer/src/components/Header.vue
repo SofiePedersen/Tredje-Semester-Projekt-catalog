@@ -171,6 +171,7 @@ const menuItems = [
   justify-content: center;
   gap: 10px; 
   margin-top: 10px;
+  margin-bottom: 5%;
 }
 
 .header__logo {
@@ -184,6 +185,7 @@ const menuItems = [
 #searchform {
   background: grey;
   border-radius: 25px;
+  width: 60%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -193,8 +195,8 @@ const menuItems = [
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 25px;
-  font-size: 20px;
+  border-width: 3px;
+  font-size: 24px;
   padding: 8px 40px 8px 20px;
 }
 
@@ -219,6 +221,7 @@ const menuItems = [
 .header__icon__basket {
   height: 50px;
   width: 50px;
+  padding-top: 5px;
   margin-left: auto;
   margin-right: auto;
   border: none;
