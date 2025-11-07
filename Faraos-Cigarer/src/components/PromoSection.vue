@@ -1,6 +1,5 @@
 <script setup>
 import PromoCards from "./PromoCards.vue";
-import placeholder from "@/assets/image/placeholder.webp";
 import Promo1 from "@/assets/image/promo_1.webp";
 import Promo2 from "@/assets/image/promo_2.webp";
 import Promo3 from "@/assets/image/promo_3.webp";
