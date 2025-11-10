@@ -6,8 +6,8 @@ defineProps({
 </script>
 
 <template>
-  <div class="category-card">
-    <div class="image-wrapper">
+  <div class="promo-card">
+    <div class="promo-card__image">
       <img :src="image" :alt="title" />
       <button>{{ title }}</button>
     </div>
@@ -17,37 +17,37 @@ defineProps({
 <style lang="scss" scoped>
 @import "../assets/main.scss";
 
-.image-wrapper {
+.promo-card__image {
   position: relative;
   width: 100%;
   margin-bottom: 5%;
 }
 
-.category-card img {
+.promo-card img {
   width: 400px;
   height: auto;
   object-fit: cover;
-  box-shadow: 7px 7px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.44rem 0.44rem rgba(0, 0, 0, 0.25);
 }
 
-.category-card button {
+.promo-card button {
   position: absolute;
-  bottom: -15px;
+  bottom: -0.94rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 0.5rem 1rem;
   background-color: $color-anubis-black;
   color: $color-pharaos-gold;
   font-family: $font-boogaloo;
-  font-size: 32px;
+  font-size: 2rem;
   border: none;
   cursor: pointer;
-  box-shadow: 7px 7px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.44rem 0.44rem rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   width: auto;
 }
 
-.category-card button:hover {
+.promo-card button:hover {
   background-color: $color-pharaos-gold;
   color: $color-anubis-black;
 }

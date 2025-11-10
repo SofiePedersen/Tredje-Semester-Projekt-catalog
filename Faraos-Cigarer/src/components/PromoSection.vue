@@ -21,7 +21,7 @@ const categories = [
 </script>
 
 <template>
-  <section class="category-section">
+  <section class="promo-section">
     <PromoCards
       v-for="(item, index) in categories"
       :key="index"
@@ -32,7 +32,7 @@ const categories = [
 </template>
 
 <style scoped>
-.category-section {
+.promo-section {
   display: flex;
   gap: 1.5rem;
   justify-content: center;

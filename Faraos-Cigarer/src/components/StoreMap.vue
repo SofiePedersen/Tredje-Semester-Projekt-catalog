@@ -12,14 +12,19 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
   <div class="butikker__danmark">
     <div>
-      <h2 class="butikker__landsdele">Jylland</h2>
+      <h2 class="butikker__landsdele">Jylland
       <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
+      </h2>
     </div>
 
     <p>Find alle de lokale butikker på Jylland her:</p>
 
-    <h2 class="butikker__landsdele">Fyn</h2>
-    <h2 class="butikker__landsdele">Sjælland</h2>
+    <h2 class="butikker__landsdele">Fyn
+      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
+    </h2>
+    <h2 class="butikker__landsdele">Sjælland
+      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
+    </h2>
   </div>
 
 </template>
@@ -44,20 +49,26 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
   margin-right: 15%;
 }
 
+
 .butikker__landsdele {
+  display: flex;
   background-color:#0E0F11;
-  padding: 1rem;
+  justify-content: start;
+  padding: 1rem;  
   margin-bottom: 2rem;  
 }
 
 .butikker__ikon {
-  position: absolute;
-  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .5rem;
   background: none;
   border: none;
   color: #efd17a;
-  font-size: 20px;
+  font-size: 28px;
   cursor: pointer;
 }
+
 
 </style>
