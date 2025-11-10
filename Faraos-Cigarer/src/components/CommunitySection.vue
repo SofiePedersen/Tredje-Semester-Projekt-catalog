@@ -6,9 +6,16 @@ import Community3 from "@/assets/image/community_3.webp";
 
 <template>
   <div class="community-section">
-    <div class="community-section__klub-faraos"></div>
-    <div class="community-section__e-label"></div>
-    <div class="community-section__news"></div>
+    <div class="community-section__klub-faraos">
+      <p>KLUB FARAOS</p>
+    </div>
+    <div class="community-section__e-label">
+      <P>FARAOS ER E-MÆRKET</P>
+      <img :src="Community2" alt="Hjemmesiden er e-mærket" />
+    </div>
+    <div class="community-section__news">
+      <P>NYHEDER</P>
+    </div>
   </div>
 </template>
 
@@ -32,9 +39,6 @@ import Community3 from "@/assets/image/community_3.webp";
   width: 100%;
   height: 10rem;
   background-color: $color-anubis-black;
-  background-image: url("@/assets/image/community_2.webp");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .community-section__news {
