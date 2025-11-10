@@ -28,14 +28,11 @@ import Community3 from "@/assets/image/community_3.webp";
 }
 
 .community-section__klub-faraos {
+  position: relative;
   width: 100%;
   height: 11rem;
-  background-color: $color-pharaos-gold;
-  background-image: url("../assets/image/community_1.webp");
-  background-repeat: no-repeat;
-  background-size: 42%;
-  background-position: 0 0.09rem;
   color: $color-newspaper-white;
+  background-color: $color-pharaos-gold;
   font-family: $font-boogaloo;
   -webkit-text-stroke: 0.1rem $color-anubis-black;
   font-size: 2.44rem;
@@ -46,6 +43,24 @@ import Community3 from "@/assets/image/community_3.webp";
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+}
+
+.community-section__klub-faraos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/image/community_1.webp");
+  background-repeat: no-repeat;
+  background-size: 42%;
+  background-position: 0 0.09rem;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.community-section__klub-faraos p {
+  position: relative;
+  z-index: 1;
 }
 
 .community-section__e-label {
