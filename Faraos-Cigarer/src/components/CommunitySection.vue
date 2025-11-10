@@ -10,11 +10,11 @@ import Community3 from "@/assets/image/community_3.webp";
       <p>KLUB FARAOS</p>
     </div>
     <div class="community-section__e-label">
-      <P>FARAOS ER E-MÆRKET</P>
+      <p>FARAOS ER E-MÆRKET</p>
       <img :src="Community2" alt="Hjemmesiden er e-mærket" />
     </div>
     <div class="community-section__news">
-      <P>NYHEDER</P>
+      <p>NYHEDER</p>
     </div>
   </div>
 </template>
