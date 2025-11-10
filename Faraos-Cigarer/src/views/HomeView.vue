@@ -8,5 +8,6 @@ import Promosection from "@/components/PromoSection.vue";
     <Slideshow />
     <h2>UDFORSK FARAOS UNIVERS</h2>
     <Promosection />
+    <h2>FARAOS FÆLLESKAB</h2>
   </main>
 </template>
