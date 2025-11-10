@@ -49,22 +49,56 @@ const footerSections = [
     <footer>
         <FooterList v-for="(section, index) in footerSections" :key="index" :title="section.title"
             :menu-items="section.items" />
-    </footer>
-    <div>
-        <div>
-            <img src="../assets/icons/phone-icon.svg" alt="Et gult ikon af en telefon" />
-            <p>33 32 22 11</p>
+        <div class="footer-info--wrapper">
+            <div class="footer-info">
+                <img class="footer-info--img" src="../assets/icons/phone-icon.svg" alt="Et gult ikon af en telefon" />
+                <p class="footer-info--text">33 32 22 11</p>
+            </div>
+            <div class="footer-info">
+                <img class="footer-info--img" src="../assets/icons/mail-icon.svg" alt="Et gult ikon af en telefon" />
+                <p class="footer-info--text">faraos@faraos.dk</p>
+            </div>
+            <div class="footer-info">
+                <img class="footer-info--img" src="../assets/icons/location-icon.svg" alt="Et gult ikon af en telefon" />
+                <p class="footer-info--text">Skindergade 27, 1159 København K</p>
+            </div>
         </div>
-        <img src="../assets/icons/mail-icon.svg" alt="Et gult ikon af en telefon" />
-        <p>faraos@faraos.dk</p>
-
-    </div>
+    </footer>
 </template>
+
 <style lang="scss" scoped>
 @import '../assets/main.scss';
 
 footer {
     background-color: $color-anubis-black;
     width: 100%;
+}
+
+.footer-info--wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    .footer-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .footer-info--img {
+            width: 2rem;
+            margin-right: 2rem;
+        }
+
+        .footer-info--text {
+            color: $color-newspaper-white;
+            font-family: $font-play;
+            font-size: 1rem;
+        }
+    }
+
+    .footer-info:nth-of-type(2) {
+    .footer-info--text {
+        text-decoration: underline;
+    }}
 }
 </style>
