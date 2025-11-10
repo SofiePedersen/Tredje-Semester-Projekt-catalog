@@ -17,8 +17,6 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
       </h2>
     </div>
 
-    <p>Find alle de lokale butikker på Jylland her:</p>
-
     <h2 class="butikker__landsdele">FYN
       <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
     </h2>
