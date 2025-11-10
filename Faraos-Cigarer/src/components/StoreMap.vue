@@ -3,6 +3,37 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 
+
+const storeMapSections = [
+  {
+    title: "JYLLAND",
+    items: [
+      { text: "AARHUS GAMES", link: "#" },
+      { text: "AARHUS COMICS", link: "#" },
+    ]
+  },
+  {
+    title: "FYN",
+    items: [
+      { text: "ODENSE", link: "#" },
+    ]
+  },
+  {
+    title: "SJÆLLAND",
+    items: [
+      { text: "KØBENHAVN COMICS & POTTER", link: "#" },
+      { text: "KØBENHAVN BRÆT- & ROLLESPIL", link: "#" },
+      { text: "KØBENHAVN FIGURSPIL", link: "#" },
+      { text: "KØBENHAVN KORTSPIL", link: "#" },
+      { text: "KØBENHAVN MANGA", link: "#" },
+      { text: "KØBENHAVN UDKLÆDNING & LIVEROLLESPIL", link: "#" },
+      { text: "KØBENHAVN MERCHANDISE", link: "#" },
+      { text: "LYNGBY GAMES", link: "#" },
+      { text: "LYNGBY COMICS", link: "#" },
+    ]
+  },
+];
+
 </script>
 
 
@@ -13,15 +44,15 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
   <div class="butikker__danmark">
     <div>
       <h2 class="butikker__landsdele">JYLLAND
-      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
+      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" /> 
       </h2>
     </div>
 
     <h2 class="butikker__landsdele">FYN
-      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
+      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" /> 
     </h2>
-    <h2 class="butikker__landsdele">SJÆLLAND
-      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
+    <h2 class="butikker__landsdele">SJÆLLAND 
+      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" /> 
     </h2>
   </div>
 

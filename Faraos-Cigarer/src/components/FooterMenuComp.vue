@@ -23,10 +23,7 @@ const toggleMenu = () => {
     <div class="footer-lists">
         <div class="footer-lists--toggle" @click="toggleMenu">
             <h3>{{ title }}</h3>
-            <img 
-              src="../assets/icons/arrow-vector.svg" 
-              alt="ikon af en knap som er toggle"
-              :class="{ 'rotated': isOpen }"
+            <img src="../assets/icons/arrow-vector-icon.svg" alt="ikon af en knap som er toggle" :class="{ 'rotated': isOpen }"
             >
         </div>
         <ul class="footer-lists__menu" :style="{ display: isOpen ? 'block' : 'none' }">
