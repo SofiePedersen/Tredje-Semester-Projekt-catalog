@@ -1,5 +1,6 @@
 <script setup>
-
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 
 </script>
@@ -10,7 +11,11 @@
   <h2>HVOR VIL DU HEN?</h2>
 
   <div class="butikker__danmark">
-    <h2 class="butikker__landsdele">Jylland</h2>
+    <div>
+      <h2 class="butikker__landsdele">Jylland</h2>
+      <FontAwesomeIcon :icon="faAngleDown" class="butikker__ikon" />
+    </div>
+
     <p>Find alle de lokale butikker på Jylland her:</p>
 
     <h2 class="butikker__landsdele">Fyn</h2>
@@ -43,6 +48,16 @@
   background-color:#0E0F11;
   padding: 1rem;
   margin-bottom: 2rem;  
+}
+
+.butikker__ikon {
+  position: absolute;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #efd17a;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 </style>
