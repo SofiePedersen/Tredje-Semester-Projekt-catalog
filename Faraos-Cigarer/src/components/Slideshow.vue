@@ -49,25 +49,40 @@ onUnmounted(() => {
 <template>
   <div class="slideshow">
     <div v-show="currentIndex === 0">
-      <img src="../assets/image/mobil_slideshow_1.webp" alt="Billede 1" />
+      <img src="../assets/image/mobil_slideshow_1.webp" alt="Asterix bøger" />
     </div>
     <div v-show="currentIndex === 1">
-      <img src="../assets/image/mobil_slideshow_2.webp" alt="Billede 2" />
+      <img
+        src="../assets/image/mobil_slideshow_2.webp"
+        alt="Efterårs udsalg op til 80% rabat"
+      />
     </div>
     <div v-show="currentIndex === 2">
-      <img src="../assets/image/mobil_slideshow_3.webp" alt="Billede 3" />
+      <img
+        src="../assets/image/mobil_slideshow_3.webp"
+        alt="Drager og demoner er ude nu"
+      />
     </div>
     <div v-show="currentIndex === 3">
-      <img src="../assets/image/mobil_slideshow_4.webp" alt="Billede 4" />
+      <img
+        src="../assets/image/mobil_slideshow_4.webp"
+        alt="One piece merchandise"
+      />
     </div>
     <div v-show="currentIndex === 4">
-      <img src="../assets/image/mobil_slideshow_5.webp" alt="Billede 5" />
+      <img
+        src="../assets/image/mobil_slideshow_5.webp"
+        alt="The walking dead bind 10 med med Dansk version ude nu"
+      />
     </div>
     <div v-show="currentIndex === 5">
-      <img src="../assets/image/mobil_slideshow_6.webp" alt="Billede 6" />
+      <img
+        src="../assets/image/mobil_slideshow_6.webp"
+        alt="Ensomme ulv - Flugten fra mørket ude nu"
+      />
     </div>
 
-    <div class="dots">
+    <div class="slideshow__firkanter">
       <button
         v-for="n in totalSlides"
         :key="n"
@@ -76,8 +91,8 @@ onUnmounted(() => {
       ></button>
     </div>
 
-    <div class="control-bar">
-      <div class="controls">
+    <div class="slideshow__control-bar">
+      <div class="slideshow__control-bar--controls">
         <button @click="nextSlide(-1)">
           <FontAwesomeIcon :icon="faAngleLeft" />
         </button>
@@ -106,44 +121,47 @@ onUnmounted(() => {
   display: block;
 }
 
-.dots {
+.slideshow__firkanter {
   display: flex;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 0.31rem;
   position: absolute;
-  bottom: 50px;
-  left: 25px;
+  bottom: 3.75rem;
+  left: 1.56rem;
   margin-top: 0;
 }
 
-.dots button {
-  width: 12px;
-  height: 12px;
+.slideshow__firkanter button {
+  width: 0.7rem;
+  height: 0.7rem;
   background-color: $color-newspaper-white;
   border-color: #000000;
-  border-width: 1px;
+  border-width: 0.06rem;
   border-style: solid;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.dots button.active {
+.slideshow__firkanter button.active {
   background-color: #000000;
 }
 
-.controls button {
+.slideshow__control-bar--controls button {
   background-color: $color-pharaos-gold;
   color: #000000;
   border-color: $color-pharaos-gold;
   cursor: pointer;
+  margin-right: 0.6rem;
+  padding: 0.3rem 0.3rem;
+  border: 1px solid $color-pharaos-gold;
 }
 
-.control-bar {
+.slideshow__control-bar {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   background-color: #000000;
-  padding: 10px 0 10px 40px;
+  padding: 0.6rem 0 0.6rem 1.25rem;
   display: flex;
   justify-content: flex-start;
   box-sizing: border-box;
