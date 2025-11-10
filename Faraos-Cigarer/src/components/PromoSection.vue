@@ -7,15 +7,15 @@ import Promo3 from "@/assets/image/promo_3.webp";
 const categories = [
   {
     image: Promo1,
-    title: "Populære produkter",
+    title: "POPULÆRE PRODUKTER",
   },
   {
     image: Promo2,
-    title: "Nye varer",
+    title: "NYE VARER",
   },
   {
     image: Promo3,
-    title: "Tilbud",
+    title: "TILBUD",
   },
 ];
 </script>
