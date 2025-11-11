@@ -20,7 +20,7 @@ const storeMapSections = ref([
     title: 'FYN',
     items: [
       { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
-      { id: 'f2', title: 'ODENSE', url: '#' },
+      { id: 'f2', title: 'ODENSE', url: '/information' },
     ],
   },
   {
