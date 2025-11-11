@@ -5,8 +5,8 @@ const footerSections = [
     {
         title: "BUTIKKER",
         items: [
-            { text: "Åbningstider", link: "#" },
-            { text: "Lokationer", link: "#" },
+            { text: "Åbningstider", link: "/Butikker" },
+            { text: "Lokationer", link: "/Butikker" },
             { text: "Faraos Cigarer Online", link: "#" },
             { text: "Aktiviteter", link: "#" },
             { text: "Kalender", link: "#" }
@@ -201,8 +201,6 @@ footer {
                 margin: 0.5rem;
             }
         }
-
-
     }
 }
 </style>
