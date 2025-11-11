@@ -37,4 +37,18 @@ const isExpanded = ref(false)
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '../assets/main.scss';
+
+.about-section {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: $color-pharaos-gold;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+</style>
