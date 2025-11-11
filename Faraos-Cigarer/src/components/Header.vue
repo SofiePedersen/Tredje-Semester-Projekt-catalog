@@ -35,8 +35,7 @@ const menuItems = [
         <div class="wrapper">
             <div class="logo-box">
                 <RouterLink to="/" class="logo-box-flex">
-                    <img alt="Best Bud logo" class="logo" src="../assets/images/best-bud-logo.svg" />
-                    <h1 class="website-Titel">BestBud</h1>
+                    <img alt="faraos logo" class="logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
                 </RouterLink>
             </div>
         </div>
