@@ -2,6 +2,7 @@
 import Slideshow from "../components/Slideshow.vue";
 import Promosection from "@/components/PromoSection.vue";
 import CommunitySection from "@/components/CommunitySection.vue";
+import SocialsSection from "@/components/SocialsSection.vue";
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import CommunitySection from "@/components/CommunitySection.vue";
     <Promosection />
     <h2>FARAOS FÆLLESKAB</h2>
     <CommunitySection />
+    <SocialsSection />
   </main>
 </template>
