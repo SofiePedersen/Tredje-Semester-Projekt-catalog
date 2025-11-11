@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import StoreMap from '@/components/StoreMap.vue';
+import Stores from '@/components/Stores.vue';
 
 </script>
 
 <template>
-  <StoreMap></StoreMap>
+  <Stores></Stores>
 </template>
 
 <style>
