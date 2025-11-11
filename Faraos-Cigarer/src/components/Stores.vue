@@ -48,7 +48,7 @@ function toggleSection(id) {
   <h2>HVOR VIL DU HEN?</h2>
 
   <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu">
-    <button class="butikker__sektion-knap" @click="toggleSection(section.id)">
+    <button class="butikker__sektion--knap" @click="toggleSection(section.id)">
       {{ section.title }}
       <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" class="butikker__ikon"/>
     </button>
