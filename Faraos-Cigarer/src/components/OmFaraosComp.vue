@@ -80,7 +80,7 @@
 }
 
 .read-more-btn:hover {
-    color: #6bb5f1;
+    color: #a8d1f3;
 }
 
 .roar-image {
