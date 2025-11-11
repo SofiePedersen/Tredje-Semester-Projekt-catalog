@@ -1,18 +1,83 @@
 <script setup>
+    import { ref } from 'vue'
 
+    const isExpanded = ref(false)
 </script>
 
 <template>
-    <div>
-        <h2></h2>
-        <div>
-            <p></p>
-            <button></button>
+    <div class="about-section">
+        <h2>LIDT OM FARAOS</h2>
+        <div class="about-content">
+            <p :class="{ collapsed: !isExpanded }">
+                Vi er landets største specialbutik for alt fra tegneserier og brætspil til manga og merchandise.
+                <br>
+                Du finder os i København, Aarhus, Odense og Lyngby – med i alt ni butikker, hvor hver afdeling har sine
+                egne specialister klar til at hjælpe dig, uanset om du er til superhelte, samlekort, figurer eller
+                fantasy-universer.
+                <br>
+                I København har vi dedikerede butikker til hver kategori, mens Lyngby og Aarhus samler det hele under ét
+                tag. Vores 600 m² store butik i Odense har alt det bedste fra Faraos Cigarer – samlet ét sted.
+                <br>
+                Det hele findes også her på hjemmesiden – og alt hvad du ser online, er på lager i vores butikker i
+                København (og omvendt).
+                <br>
+                Har du spørgsmål, står vores passionerede medarbejdere altid klar med råd og vejledning – både i
+                butikken og online.
+            </p>
+            <button class="read-more-btn" @click="isExpanded = !isExpanded">
+                {{ isExpanded ? 'Læs mindre' : 'Læs Mere' }}
+            </button>
         </div>
+    </div>
+    <div class="roar-image">
+        <img src="../assets/image/faraos-cigarer-roar.png" />
     </div>
 </template>
 
 <style lang="scss" scoped>
 @import '../assets/main.scss';
 
+.about-content {
+    position: relative;
+}
+
+.about-content p {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.about-content p.collapsed {
+    max-height: 3em;
+    /* Shows approximately 2 lines */
+    position: relative;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    /* Adjust to your brand color */
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+.read-more-btn:hover {
+    color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.roar-image {
+    margin-top: 2rem;
+    clear: both;
+    /* Clears any floats */
+}
+
+.roar-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 </style>
