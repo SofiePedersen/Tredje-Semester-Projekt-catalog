@@ -10,24 +10,27 @@ const storeMapSections = ref([
     id: 'jylland',
     title: 'JYLLAND',
     items: [
-      { id: 'j1', title: 'AARHUS GAMES', url: '#' },
-      { id: 'j2', title: 'AARHUS COMICS', url: '#' },
+      { id: 'j1', title: 'Find alle de lokale butikker på Jylland!', url: '#' },
+      { id: 'j2', title: 'AARHUS GAMES', url: '#' },
+      { id: 'j3', title: 'AARHUS COMICS', url: '#' },
     ],
   },
   {
     id: 'fyn',
     title: 'FYN',
     items: [
-      { id: 'f1', title: 'ODENSE', url: '#' },
+      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
+      { id: 'f2', title: 'ODENSE', url: '#' },
     ],
   },
   {
     id: 'sjaelland',
     title: 'SJÆLLAND',
     items: [
-      { id: 's1', title: 'KØBENHAVN COMICS & POTTER', url: '#' },
-      { id: 's2', title: 'KØBENHAVN BRÆT- & ROLLESPIL', url: '#' },
-      { id: 's3', title: 'KØBENHAVN FIGURSPIL', url: '#' },
+      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
+      { id: 's2', title: 'KØBENHAVN COMICS & POTTER', url: '#' },
+      { id: 's3', title: 'KØBENHAVN BRÆT- & ROLLESPIL', url: '#' },
+      { id: 's4', title: 'KØBENHAVN FIGURSPIL', url: '#' },
     ],
   },
 ]);
@@ -81,12 +84,30 @@ function toggleSection(id) {
   background-color: $color-anubis-black;
 }
 
+.butikker__sektion-knap {
+  background: none;
+  border: none;
+  color: $color-pharaos-gold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Boogaloo";
+  cursor: pointer;
+}
+
 .butikker__sektion__boks {
   list-style: none;
   padding: 0;
   margin: 0.5rem 0;
   width: 100%;
-  color: $color-pharaos-gold;
+  color: $color-anubis-black;
+  background-color: $color-pharaos-gold;
   text-align: center;
   justify-content: center;
 }
@@ -94,14 +115,14 @@ function toggleSection(id) {
 .butikker__links {
   justify-content: center;
   text-decoration: none;
-  color: $color-pharaos-gold;
+  font-family: "play";
+  color: $color-anubis-black;
 }
 
 .butikker__sektion__listitem {
   margin: 3rem 0;
   justify-content: center;
 }
-
 
 .slide-fade-enter-active {
   transition: all 250ms ease;

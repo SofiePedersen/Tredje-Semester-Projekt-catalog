@@ -3,7 +3,7 @@ import Slideshow from "../components/Slideshow.vue";
 import Promosection from "@/components/PromoSection.vue";
 import CommunitySection from "@/components/CommunitySection.vue";
 import SocialsSection from "@/components/SocialsSection.vue";
-import OmFaraosComp from "@/components/OmFaraosComp.vue";
+import OmFaraosComp from "@/components/AboutFaraosComp.vue";
 </script>
 
 <template>
