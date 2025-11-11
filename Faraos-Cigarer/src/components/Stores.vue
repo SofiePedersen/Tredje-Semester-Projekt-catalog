@@ -51,7 +51,7 @@ function toggleSection(id) {
     </button>
     <transition name="slide-fade">
       <ul v-if="openSection === section.id" class="butikker__sektion__boks">
-        <li v-for="item in section.items" :key="item.id" class="butikker__sektion-liste-item">
+        <li v-for="item in section.items" :key="item.id" class="butikker__sektion__listitem">
           <RouterLink :to="item.url" class="butikker__links">{{ item.title }}</RouterLink>
         </li>
       </ul>
@@ -92,6 +92,10 @@ function toggleSection(id) {
 .butikker__links {
   text-decoration: none;
   color: $color-pharaos-gold;
+}
+
+.butikker__sektion__listitem {
+  margin: 3rem 0;
 }
 
 
