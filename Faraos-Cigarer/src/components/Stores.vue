@@ -47,10 +47,10 @@ function toggleSection(id) {
   <img class="butikker__kort" src="@/assets/image/Landekort.webp" alt="Landkort" />
   <h2>HVOR VIL DU HEN?</h2>
 
-  <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion">
+  <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu">
     <button class="butikker__sektion-knap" @click="toggleSection(section.id)">
       {{ section.title }}
-      <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" />
+      <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" class="butikker__ikon"/>
     </button>
     <transition name="slide-fade">
       <ul v-if="openSection === section.id" class="butikker__sektion__boks">
@@ -83,6 +83,18 @@ function toggleSection(id) {
   color: $color-pharaos-gold;
   background-color: $color-anubis-black;
 }
+
+.butikker__ikon {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+.butikker__ikon.rotate-180 {
+  transform: rotate(-180deg);
+}
+
 
 .butikker__sektion-knap {
   background: none;
@@ -119,31 +131,12 @@ function toggleSection(id) {
   color: $color-anubis-black;
 }
 
+
 .butikker__sektion__listitem {
   margin: 3rem 0;
   justify-content: center;
 }
 
-.slide-fade-enter-active {
-  transition: all 250ms ease;
-}
-.slide-fade-leave-active {
-  transition: all 200ms ease;
-}
-.slide-fade-enter-from {
-  opacity: 0;
-  transform: translateY(-6px);
-}
-.slide-fade-enter-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-.slide-fade-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
-.slide-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
-}
+
+
 </style>
