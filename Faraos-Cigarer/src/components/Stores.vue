@@ -92,11 +92,11 @@ function toggleSection(id) {
 }
 
 .butikker__ikon.rotate-180 {
-  transform: rotate(-180deg);
+  transform: rotate(180deg);
 }
 
 
-.butikker__sektion-knap {
+.butikker__sektion--knap {
   background: none;
   border: none;
   color: $color-pharaos-gold;

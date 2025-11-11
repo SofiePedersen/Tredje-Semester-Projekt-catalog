@@ -35,7 +35,7 @@ const menuItems = [
         <div class="wrapper">
             <div class="logo-box">
                 <RouterLink to="/" class="logo-box-flex">
-                    <img alt="faraos logo" class="logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
+                    <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
                 </RouterLink>
             </div>
         </div>
@@ -167,7 +167,6 @@ const menuItems = [
 .header {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -184,9 +183,11 @@ const menuItems = [
 .header__logo {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: 'Boogaloo';
-  margin-bottom: 20px;
+  width:  290px;
+  height: auto;
+  margin: auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 #searchform {
