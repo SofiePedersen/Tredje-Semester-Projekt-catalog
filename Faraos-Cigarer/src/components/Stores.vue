@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { ref } from 'vue';
+import { useRouter } from "vue-router";
 
 
 const storeMapSections = ref([
@@ -49,9 +50,9 @@ function toggleSection(id) {
       <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" />
     </button>
     <transition name="slide-fade">
-      <ul v-if="openSection === section.id" class="butikker__sektion-liste">
-        <li v-for="item in section.items" :key="item.id" class="butikker__sektion-liste-item">
-          <a :href="item.url">{{ item.title }}</a>
+      <ul v-if="openSection === section.id" class="butikker__sektion__boks">
+        <li v-for="item in section.items" :key="item.id" class="butikker__sektion__listitem">
+          <RouterLink :to="item.url" class="butikker__links">{{ item.title }}</RouterLink>
         </li>
       </ul>
     </transition>
@@ -69,8 +70,32 @@ function toggleSection(id) {
 }
 
 .butikker__sektion {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: $color-pharaos-gold;
   background-color: $color-anubis-black;
+}
+
+.butikker__sektion__boks {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  width: 100%;
+  color: $color-pharaos-gold;
+  text-align: center;
+}
+
+.butikker__links {
+  text-decoration: none;
+  color: $color-pharaos-gold;
+}
+
+.butikker__sektion__listitem {
+  margin: 3rem 0;
 }
 
 
