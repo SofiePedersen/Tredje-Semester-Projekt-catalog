@@ -8,6 +8,7 @@
     <div class="about-section">
         <h2>LIDT OM FARAOS</h2>
         <div class="about-content">
+            <!-- Dynamic class binding -->
             <p :class="{ collapsed: !isExpanded }">
                 Vi er landets største specialbutik for alt fra tegneserier og brætspil til manga og merchandise.
                 <br>
@@ -25,6 +26,8 @@
                 butikken og online.
             </p>
             <button class="read-more-btn" @click="isExpanded = !isExpanded">
+                <!-- Her bruger vi en ternary operator som lader os skrive en if else statement i vores abstraction -->
+                <!-- Basically hvis isExpanded er true vis "læs mindre", hvis false vis "læs mere" -->
                 {{ isExpanded ? 'Læs mindre' : 'Læs Mere' }}
             </button>
         </div>
