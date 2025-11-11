@@ -81,12 +81,29 @@ function toggleSection(id) {
   background-color: $color-anubis-black;
 }
 
+.butikker__sektion-knap {
+  background: none;
+  border: none;
+  color: $color-pharaos-gold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Boogaloo";
+  cursor: pointer;
+}
+
 .butikker__sektion__boks {
   list-style: none;
   padding: 0;
   margin: 0.5rem 0;
   width: 100%;
-  color: $color-pharaos-gold;
+  color: $color-anubis-black;
+  background-color: $color-pharaos-gold;
   text-align: center;
   justify-content: center;
 }
@@ -94,14 +111,13 @@ function toggleSection(id) {
 .butikker__links {
   justify-content: center;
   text-decoration: none;
-  color: $color-pharaos-gold;
+  color: $color-anubis-black;
 }
 
 .butikker__sektion__listitem {
   margin: 3rem 0;
   justify-content: center;
 }
-
 
 .slide-fade-enter-active {
   transition: all 250ms ease;
