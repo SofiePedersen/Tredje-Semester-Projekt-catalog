@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
+</script>
 
 <template>
   <div class="socials-section">
@@ -9,6 +12,7 @@
       <p>INSTAGRAM</p>
     </div>
     <div class="socials-section__tiktok">
+      <FontAwesomeIcon :icon="faTiktok" />
       <p>TIKTOK</p>
     </div>
     <div class="socials-section__twitter">
