@@ -51,7 +51,6 @@
 
 .about-content p.collapsed {
     max-height: 3em;
-    /* Shows approximately 2 lines */
     position: relative;
 }
 
@@ -59,7 +58,6 @@
     background: none;
     border: none;
     color: #007bff;
-    /* Adjust to your brand color */
     cursor: pointer;
     padding: 0;
     font-size: inherit;
@@ -69,13 +67,10 @@
 
 .read-more-btn:hover {
     color: #0056b3;
-    /* Darker shade on hover */
 }
 
 .roar-image {
     margin-top: 2rem;
-    clear: both;
-    /* Clears any floats */
 }
 
 .roar-image img {
