@@ -61,10 +61,16 @@ function toggleSection(id) {
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/main.scss";
 
 .butikker__kort {
   width: 100%;
   height: auto;
+}
+
+.butikker__sektion {
+  margin-bottom: 1.5rem;
+  background-color: $color-anubis-black;
 }
 
 
