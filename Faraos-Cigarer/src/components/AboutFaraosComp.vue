@@ -10,20 +10,13 @@
         <div class="about-content">
             <!-- Dynamic class binding -->
             <p :class="{ collapsed: !isExpanded }">
-                Vi er landets største specialbutik for alt fra tegneserier og brætspil til manga og merchandise.
+                Faraos Cigarer i Odense bliver den første butik, der samler det bedste fra Faraos Cigarer i én butik. 
                 <br><br>
-                Du finder os i København, Aarhus, Odense og Lyngby – med i alt ni butikker, hvor hver afdeling har sine
-                egne specialister klar til at hjælpe dig, uanset om du er til superhelte, samlekort, figurer eller
-                fantasy-universer.
+                Butikken, der åbnede 1. juni 2019, indeholder rollespil, live rollespil, brætspil, figurspil, tegneserier, Magic the Gathering, Warhammer, merchandise og meget, meget, MEGET mere. 
                 <br><br>
-                I København har vi dedikerede butikker til hver kategori, mens Lyngby og Aarhus samler det hele under ét
-                tag. Vores 600 m² store butik i Odense har alt det bedste fra Faraos Cigarer – samlet ét sted.
+                Den 600 m2 store butik har også et stort spilareal, der giver mulighed for at spille både i butikkens almindelige åbningstider og ved butikkens mange hobbyaftner. 
                 <br><br>
-                Det hele findes også her på hjemmesiden – og alt hvad du ser online, er på lager i vores butikker i
-                København (og omvendt).
-                <br><br>
-                Har du spørgsmål, står vores passionerede medarbejdere altid klar med råd og vejledning – både i
-                butikken og online.
+                Tidligere har vores lokalet også huset vores airsoftbutik, men de har nu fået deres egne lokaler. Læs mere om det her: 
             </p>
             <button class="read-more-btn" @click="isExpanded = !isExpanded">
                 <!-- Her bruger vi en ternary operator som lader os skrive en if else statement i vores abstraction -->
