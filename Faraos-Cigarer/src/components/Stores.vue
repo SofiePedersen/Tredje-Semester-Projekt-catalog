@@ -75,7 +75,8 @@ function toggleSection(id) {
   margin-bottom: 1rem;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
   color: $color-pharaos-gold;
   background-color: $color-anubis-black;
 }
@@ -87,15 +88,18 @@ function toggleSection(id) {
   width: 100%;
   color: $color-pharaos-gold;
   text-align: center;
+  justify-content: center;
 }
 
 .butikker__links {
+  justify-content: center;
   text-decoration: none;
   color: $color-pharaos-gold;
 }
 
 .butikker__sektion__listitem {
   margin: 3rem 0;
+  justify-content: center;
 }
 
 
