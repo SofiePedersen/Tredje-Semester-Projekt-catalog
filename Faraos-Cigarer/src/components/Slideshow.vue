@@ -47,8 +47,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="slideshow" aria-label="1 ud af 6: karrusel">
-    <div v-show="currentIndex === 0">
+  <div class="slideshow" aria-label="Karrusel">
+    <div v-show="currentIndex === 0" aria-label="1 ud af 6: karrusel">
       <img
         src="../assets/image/mobil_slideshow_1.webp"
         alt="Asterix bøger"
