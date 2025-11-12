@@ -20,7 +20,7 @@ onMounted(() => {
 });
 
 
-// yo mr scrummy her, de her elementer skal lige opdateres når vi har sat routes op for lige nu kan de ikke load den nye side da det SKAL matche før det er aktivt, men det skulle virke
+
 const menuItems = [
   { name: "Hjem", link: "/" },
   { name: "Butikker", link: "/Butikker" },
@@ -39,7 +39,6 @@ const menuItems = [
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <ul id="menu">
            <li class="header__hammenu__list" v-for="item in menuItems" :key="item.name">
-              <!--<a class="header__hammenu__a" :href="item.link">{{ item.name }}</a>-->
               <router-link class="header__hammenu__searchtag" :to="item.link">{{ item.name }}</router-link>
             </li>             
           </ul>
