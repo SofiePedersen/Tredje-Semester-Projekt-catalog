@@ -5,15 +5,21 @@ import Community3 from "@/assets/image/community_3.webp";
 </script>
 
 <template>
-  <div class="community-section">
-    <div class="community-section__klub-faraos">
+  <div class="community-section" aria-label="Community sektion">
+    <div class="community-section__klub-faraos" aria-label="Klub Faraos knap">
       <p>KLUB FARAOS</p>
     </div>
-    <div class="community-section__e-label">
+
+    <div class="community-section__e-label" aria-label="E-mærket knap">
       <p>FARAOS ER E-MÆRKET</p>
-      <img :src="Community2" alt="Hjemmesiden er e-mærket" />
+      <img
+        :src="Community2"
+        alt="Hjemmesiden er e-mærket"
+        aria-label="Hjemmesiden er e-mærket"
+      />
     </div>
-    <div class="community-section__news">
+
+    <div class="community-section__news" aria-label="Nyheder knap">
       <p>NYHEDER</p>
     </div>
   </div>
