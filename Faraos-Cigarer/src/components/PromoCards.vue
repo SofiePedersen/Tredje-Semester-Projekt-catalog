@@ -6,10 +6,10 @@ defineProps({
 </script>
 
 <template>
-  <div class="promo-card">
-    <div class="promo-card__image">
-      <img :src="image" :alt="title" />
-      <button>{{ title }}</button>
+  <div class="promo-card" aria-label="Promovering kort">
+    <div class="promo-card__image" aria-label="Promoverings billede">
+      <img :src="image" :alt="title" :aria-label="`Reklamebillede: ${title}`" />
+      <button :aria-label="`Knap til ${title}`">{{ title }}</button>
     </div>
   </div>
 </template>

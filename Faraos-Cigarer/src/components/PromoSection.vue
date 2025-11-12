@@ -21,7 +21,7 @@ const categories = [
 </script>
 
 <template>
-  <div class="promo-section">
+  <div class="promo-section" aria-label="Promoveringssektion">
     <PromoCards
       v-for="(item, index) in categories"
       :key="index"

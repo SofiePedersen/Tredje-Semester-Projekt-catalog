@@ -7,12 +7,13 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 </script>
 
 <template>
-  <div class="socials-section">
+  <div class="socials-section" aria-label="Følg os på sociale medier">
     <a
       class="socials-section__facebook"
       href="https://www.facebook.com/faraoscigarer"
       target="_blank"
       rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på Facebook'"
     >
       <FontAwesomeIcon :icon="faFacebook" />
       <p>FACEBOOK</p>
@@ -23,6 +24,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
       href="https://www.instagram.com/faraoscigarer/"
       target="_blank"
       rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på Instagram'"
     >
       <FontAwesomeIcon :icon="faInstagram" />
       <p>INSTAGRAM</p>
@@ -33,6 +35,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
       href="https://www.tiktok.com/@faraoscigarer"
       target="_blank"
       rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på TikTok'"
     >
       <FontAwesomeIcon :icon="faTiktok" />
       <p>TIKTOK</p>
@@ -43,6 +46,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
       href="https://x.com/FaraosCigarer"
       target="_blank"
       rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på Twitter'"
     >
       <FontAwesomeIcon :icon="faXTwitter" />
       <p>TWITTER</p>
