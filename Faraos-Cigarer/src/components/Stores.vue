@@ -52,7 +52,7 @@ function toggleSection(id) {
   <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu" aria-label="Landele sektioner">
     <button class="butikker__sektion--knap" @click="toggleSection(section.id)" aria-label="åben/luk felt">
       {{ section.title }}
-      <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" class="butikker__ikon"/>
+      <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" class="butikker__ikon" aria-label="åben/luk pil"/>
     </button>
     <transition name="slide-fade">
       <ul v-if="openSection === section.id" class="butikker__sektion__boks" aria-label="informations boks">
