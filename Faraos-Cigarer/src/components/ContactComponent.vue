@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
+</script>
 
 <template>
   <div class="opening-hours">
@@ -50,6 +52,7 @@
       <li>1. og 2. juledag.</li>
       <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
     </ul>
+    <img :src="FaraosCigarerRoar" alt="Faraos " />
   </div>
 </template>
 
