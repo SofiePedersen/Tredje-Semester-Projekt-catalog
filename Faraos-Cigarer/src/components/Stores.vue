@@ -49,7 +49,7 @@ function toggleSection(id) {
 
   <h2>HVOR VIL DU HEN?</h2>
 
-  <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu" aria-label="Landele sektioner">
+  <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu" aria-label="landsdele sektioner">
     <button class="butikker__sektion--knap" @click="toggleSection(section.id)" aria-label="åben/luk felt">
       {{ section.title }}
       <FontAwesomeIcon :icon="faAngleDown" :class="{'rotate-180': openSection === section.id}" class="butikker__ikon" aria-label="åben/luk pil"/>
