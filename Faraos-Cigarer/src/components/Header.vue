@@ -203,6 +203,7 @@ const menuItems = [
   border-width: 3px;
   font-size: 24px;
   padding: 8px 40px 8px 20px;
+  border: 2px solid $color-anubis-black;
 }
 
 .header__icon__search {
