@@ -38,7 +38,7 @@ const menuItems = [
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <ul id="menu">
-           <li class="header__hammenu__list" v-for="item in menuItems" :key="item.name">
+            <li class="header__hammenu__list" v-for="item in menuItems" :key="item.name">
               <router-link class="header__hammenu__searchtag" :to="item.link">{{ item.name }}</router-link>
             </li>             
           </ul>
