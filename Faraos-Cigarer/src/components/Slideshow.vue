@@ -47,39 +47,47 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="slideshow">
+  <div class="slideshow" aria-label="1 ud af 6: karrusel">
     <div v-show="currentIndex === 0">
-      <img src="../assets/image/mobil_slideshow_1.webp" alt="Asterix bøger" />
+      <img
+        src="../assets/image/mobil_slideshow_1.webp"
+        alt="Asterix bøger"
+        aria-label="1 ud af 6: reklamebillede Asterix bøger"
+      />
     </div>
-    <div v-show="currentIndex === 1">
+    <div v-show="currentIndex === 1" aria-label="2 ud af 6: karrusel">
       <img
         src="../assets/image/mobil_slideshow_2.webp"
         alt="Efterårs udsalg op til 80% rabat"
+        aria-label="2 ud af 6: reklamebillede Efterårs udsalg op til 80% rabat"
       />
     </div>
-    <div v-show="currentIndex === 2">
+    <div v-show="currentIndex === 2" aria-label="3 ud af 6: karrusel">
       <img
         src="../assets/image/mobil_slideshow_3.webp"
         alt="Drager og demoner er ude nu"
+        aria-label="3 ud af 6: reklamebillede Drager og demoner er ude nu"
       />
     </div>
-    <div v-show="currentIndex === 3">
+    <div v-show="currentIndex === 3" aria-label="4 ud af 6: karrusel">
       <img
         src="../assets/image/mobil_slideshow_4.webp"
         alt="One piece merchandise"
+        aria-label="4 ud af 6: reklamebillede One piece merchandise"
       />
     </div>
-    <div v-show="currentIndex === 4" aria-label="5 ud af 5: reklamebillede af bogen Ensomme ulv - Flugten fra mørket ude nu">
+    <div v-show="currentIndex === 4" aria-label="5 ud af 6: karrusel">
       <img
         src="../assets/image/mobil_slideshow_5.webp"
         alt="The walking dead bind 10 med med Dansk version ude nu"
+        aria-label="5 ud af 6: reklamebillede af bogen The walking dead bind 10 med med Dansk version ude nu"
       />
     </div>
-    <div v-show="currentIndex === 5" aria-label="">
+    <div v-show="currentIndex === 5" aria-label="6 ud af 6: karrusel">
       <img
         src="../assets/image/mobil_slideshow_6.webp"
         alt="Ensomme ulv - Flugten fra mørket ude nu"
-        aria-label="5 ud af 5: reklamebillede af bogen Ensomme ulv - Flugten fra mørket ude nu"
+        aria-label="6 ud af 6: reklamebillede af bogen Ensomme ulv - Flugten fra mørket ude nu"
       />
     </div>
 
