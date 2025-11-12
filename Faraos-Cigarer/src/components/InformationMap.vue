@@ -10,6 +10,10 @@
         <p class="breadcrumbs__text">></p>
         <RouterLink class="breadcrumbs__text" to="/Information">Odense</RouterLink>
     </nav>
+
+    <div class="map-container">
+        <img class="gMap" src="../assets/image/faraos-local-map.webp" alt="billede af det google maps over Faraos Cigarers lokale butik i odense" />
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -32,4 +36,18 @@
     text-decoration: none;
     font-family: $font-play;
 }
+
+.breadcrumbs__text:hover {
+    color: #3396E6;
+}
+
+.map-container{
+    padding: 2rem;
+
+    .gMap {
+        width: 100%;
+        height: auto;
+    }
+}
+
 </style>
