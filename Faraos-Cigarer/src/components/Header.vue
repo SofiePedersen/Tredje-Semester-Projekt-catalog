@@ -31,14 +31,16 @@ const menuItems = [
 
 <template>
   <header>
+
     <div class="header">      
         <RouterLink to="/">
           <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
         </RouterLink>
+
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <ul id="menu">
-            <li class="header__hammenu__list" v-for="item in menuItems" :key="item.name">
+            <li class="header__hammenu__list" v-for="item in menuItems" :key="item.name" aria-label="menu valg">
               <router-link class="header__hammenu__searchtag" :to="item.link">{{ item.name }}</router-link>
             </li>             
           </ul>
@@ -51,12 +53,12 @@ const menuItems = [
         </div>
 
         <form id="searchform">
-        <input class="header__input" type="text" placeholder="" />
-        <button class="header__icon__search"><FontAwesomeIcon :icon="faMagnifyingGlass"/></button>
+        <input class="header__input" type="text" placeholder="" aria-label="søgefelt"/>
+        <button class="header__icon__search"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
         </form>
 
         <div class="header__icon">
-        <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" /></button>
+        <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
         </div>
       </div>
     </div>
