@@ -31,14 +31,10 @@ const menuItems = [
 
 <template>
   <header>
-    <div class="header">
-        <div class="wrapper">
-            <div class="logo-box">
-                <RouterLink to="/" class="logo-box-flex">
-                    <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
-                </RouterLink>
-            </div>
-        </div>
+    <div class="header">      
+        <RouterLink to="/">
+          <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
+        </RouterLink>
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <ul id="menu">
