@@ -112,7 +112,7 @@ function toggleSection(id) {
 }
 
 .breadcrumbs__text:hover {
-  color: #3396E6;
+  color: $color-tactical-blue;
 }
 
 .butikker__sektion {
