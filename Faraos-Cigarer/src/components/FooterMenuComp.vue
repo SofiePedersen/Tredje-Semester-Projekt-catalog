@@ -20,15 +20,14 @@ const toggleMenu = () => {
 </script>
 
 <template>
-    <div class="footer-lists">
-        <div class="footer-lists--toggle" @click="toggleMenu">
+    <div class="footer-lists" aria-label="Fold-ud menu" >
+        <div class="footer-lists--toggle" @click="toggleMenu" aria-label="Open og luk for fold-ud menuen">
             <h3>{{ title }}</h3>
-            <img src="../assets/icons/arrow-vector-icon.svg" alt="ikon af en knap som er toggle" :class="{ 'rotated': isOpen }"
-            >
+            <img src="../assets/icons/arrow-vector-icon.svg" alt="ikon af en knap som er toggle" :class="{ 'rotated': isOpen }" />
         </div>
-        <ul class="footer-lists__menu" :style="{ display: isOpen ? 'block' : 'none' }">
+        <ul class="footer-lists__menu" :style="{ display: isOpen ? 'block' : 'none' }" aria-label="fold-ud menuer i footeren" >
             <li v-for="(item, index) in menuItems" :key="index">
-                <RouterLink class="footer-lists__menu--links" :to="item.link">
+                <RouterLink class="footer-lists__menu--links" :to="item.link" aria-label="Linker til andre sider på hjemmesiden.">
                   {{ item.text }}
                 </RouterLink>
             </li>

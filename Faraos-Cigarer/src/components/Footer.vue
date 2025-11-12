@@ -47,62 +47,57 @@ const footerSections = [
 
 <template>
     <footer>
-        <FooterList v-for="(section, index) in footerSections" :key="index" :title="section.title"
-            :menu-items="section.items" />
-        <div class="footer-info--wrapper">
-            <div class="footer-info">
-                <img class="footer-info--img" src="../assets/icons/phone-icon.svg" alt="Et gult ikon af en telefon" />
-                <p class="footer-info--text">33 32 22 11</p>
+        <FooterList v-for="(section, index) in footerSections" :key="index" :title="section.title" :menu-items="section.items" />
+        <div class="footer-info--wrapper" aria-label="Kontaktinformationer">
+            <div class="footer-info" aria-label="Kontaktinformation">
+                <img class="footer-info--img" src="../assets/icons/phone-icon.svg" alt="Et gult ikon af en telefon" aria-label="kontaktikon"/>
+                <p class="footer-info--text" aria-label="kontaktinfo - telefon nummer">33 32 22 11</p>
             </div>
-            <div class="footer-info">
-                <img class="footer-info--img" src="../assets/icons/mail-icon.svg" alt="Et gult ikon af en telefon" />
-                <p class="footer-info--text">faraos@faraos.dk</p>
+            <div class="footer-info" aria-label="Kontaktinformation">
+                <img class="footer-info--img" src="../assets/icons/mail-icon.svg" alt="Et gult ikon af en telefon" aria-label="kontaktikon"/>
+                <p class="footer-info--text" aria-label="kontaktinfo - mail">faraos@faraos.dk</p>
             </div>
-            <div class="footer-info">
-                <img class="footer-info--img" src="../assets/icons/location-icon.svg"
-                    alt="Et gult ikon af en telefon" />
-                <p class="footer-info--text">Skindergade 27, 1159 København K</p>
+            <div class="footer-info" aria-label="Kontaktinformation">
+                <img class="footer-info--img" src="../assets/icons/location-icon.svg" alt="Et gult ikon af en telefon" aria-label="kontaktikon" />
+                <p class="footer-info--text" aria-label="kontaktinfo - adresse">Skindergade 27, 1159 København K</p>
             </div>
         </div>
-        <div class="footer-logos">
-            <div class="footer-logos-wrapper">
-                <div class="footer-logos--rounded">
+        <div class="footer-logos" aria-label="Sociale medier informationer">
+            <div class="footer-logos-wrapper" aria-label="sociale medier">
+                <div class="footer-logos--rounded" aria-label="Facebook knap">
                     <a class="" href="https://www.facebook.com/faraoscigarer#" target="_blank"
                         rel="noopener noreferrer">
                         <img src="../assets/icons/facebook-icon.svg" alt="ikon af facebooks logo" />
                     </a>
                 </div>
-                <div class="footer-logos--rounded">
+                <div class="footer-logos--rounded" aria-label="Instagram knap">
                     <a href="https://www.instagram.com/faraoscigarer/" target="_blank" rel="noopener noreferrer">
                         <img src="../assets/icons/instagram-icon.svg" alt="ikon af instagrams logo" />
                     </a>
                 </div>
-                <div class="footer-logos--rounded">
+                <div class="footer-logos--rounded" aria-label="Tiktok knap">
                     <a href="https://www.tiktok.com/@faraoscigarer" target="_blank" rel="noopener noreferrer">
                         <img src="../assets/icons/tiktok-icon.svg" alt="ikon af tiktoks logo" />
                     </a>
                 </div>
-                <div class="footer-logos--rounded">
+                <div class="footer-logos--rounded" aria-label="Twitter / X knap">
                     <a href="https://x.com/FaraosCigarer" target="_blank" rel="noopener noreferrer">
                         <img src="../assets/icons/twitter-x-icon.svg" alt="ikon af twitter logo" />
                     </a>
                 </div>
             </div>
         </div>
-        <div class="footer-payments">
-            <p class="footer-payments--text">Godkendt af e-handelsfonden</p>
+        <div class="footer-payments" aria-label="betalingsmetoder">
+            <p class="footer-payments--text" aria-label="Godkendt af e-handelsfonden">Godkendt af e-handelsfonden</p>
             <div class="footer-payments--img-wrapper">
-                <img class="footer-payments--img" src="../assets/icons/master-card-icon.svg"
-                    alt="Et ikon af mastercards logo" />
-                <img class="footer-payments--img" src="../assets/icons/visa-icon.svg" alt="Et ikon af visas logo" />
-                <img class="footer-payments--img" src="../assets/icons/visa-elec-icon.svg"
-                    alt="Et ikon af Visa Electronics logo" />
-                <img class="footer-payments--img" src="../assets/icons/dk-icon.svg" alt="Et ikon af dankorts logo" />
-                <img class="footer-payments--img" src="../assets/icons/faktura-icon.svg"
-                    alt="Et ikon af Fakturas logo" />
+                <img class="footer-payments--img" src="../assets/icons/master-card-icon.svg" alt="Et ikon af mastercards logo" aria-label="Mastercard ikon" />
+                <img class="footer-payments--img" src="../assets/icons/visa-icon.svg" alt="Et ikon af visas logo" aria-label="Visa ikon" />
+                <img class="footer-payments--img" src="../assets/icons/visa-elec-icon.svg" alt="Et ikon af Visa Electronics logo" aria-label="Visa Electronic ikon" />
+                <img class="footer-payments--img" src="../assets/icons/dk-icon.svg" alt="Et ikon af dankorts logo" aria-label="Dankort ikon" />
+                <img class="footer-payments--img" src="../assets/icons/faktura-icon.svg" alt="Et ikon af Fakturas logo" aria-label="Faktura ikon" />
             </div>
-            <p class="footer-payments--text">Gå til Trustpilot</p>
-            <p class="footer-payments--text">© Faraos Cigarer Aps Cvr 17272241</p>
+            <a href="" class="footer-payments--text" aria-label="Link til trustpilot">Gå til Trustpilot</a>
+            <p class="footer-payments--text" aria-label="Faraos Cigarer CVR: 17272241">© Faraos Cigarer Aps Cvr 17272241</p>
         </div>
     </footer>
 </template>
@@ -181,6 +176,11 @@ footer {
             color: $color-newspaper-white;
             font-family: $font-play;
             font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .footer-payements--text a:hover {
+            color: $color-tactical-blue;
         }
 
         .footer-payments--text:nth-of-type(2),

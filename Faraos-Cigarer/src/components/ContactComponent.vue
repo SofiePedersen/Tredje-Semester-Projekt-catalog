@@ -3,18 +3,18 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
 </script>
 
 <template>
-  <div class="opening-hours">
+  <div class="opening-hours" aria-label="Åbningstider for Faraos Cigarer">
     <h3 class="opening-hours__titel">ÅBNINGSTIDER</h3>
-    <div class="opening-hours__text--breaks">
+    <div class="opening-hours__text--breaks" aria-label="Hverdage">
       <p>Hverdage:</p>
       <p>Mandag - Fredag: 10:00 - 18:00</p>
     </div>
-    <div class="opening-hours__text--breaks">
+    <div class="opening-hours__text--breaks" aria-label="Weekendtider">
       <p>Weekendtider:</p>
       <p>Lørdag - 10:00 - 17:00</p>
       <p>Søndag - 11:00 - 16:00</p>
     </div>
-    <div class="opening-hours__text--breaks">
+    <div class="opening-hours__text--breaks" aria-label="Særlige lukkedage">
       <p>
         *Faraos Cigarer holder dog søndagslukket, når søndag falder på en
         helligdag.
@@ -22,24 +22,24 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
     </div>
   </div>
 
-  <div class="contact">
+  <div class="contact" aria-label="Kontaktinformation for Faraos Cigarer">
     <h3 class="contact__titel">KONTAKT</h3>
-    <div class="contact__text--breaks">
+    <div class="contact__text--breaks" aria-label="Adresse">
       <p>Faraos Cigarer - Odense</p>
       <p>Klostervej 3,</p>
       <p>5000 Odense C</p>
     </div>
-    <div class="contact__text--breaks">
+    <div class="contact__text--breaks" aria-label="Telefonnummer">
       <p>Telefon:</p>
       <p>+45 65 91 97 01</p>
     </div>
-    <div class="contact__text--breaks">
+    <div class="contact__text--breaks" aria-label="E-mail adresse">
       <p>E-mail:</p>
       <p>Odense@faraos.dk</p>
     </div>
   </div>
 
-  <div class="closing-days">
+  <div class="closing-days" aria-label="Lukkedage for Faraos Cigarer">
     <p>Faraos Cigarer holder desuden lukket de følgende dage:</p>
     <ul>
       <li>Nytårsdag</li>
@@ -49,10 +49,14 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
       <li>Grundlovsdag</li>
       <li>1. og 2. pinsedag</li>
       <li>Juleaftensdag</li>
-      <li>1. og 2. juledag.</li>
+      <li>1. og 2. juledag</li>
       <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
     </ul>
-    <img :src="FaraosCigarerRoar" alt="Faraos bill som laver en lyd" />
+    <img
+      :src="FaraosCigarerRoar"
+      alt="Bil som laver en lyd"
+      aria-label="Billede af en bil med lyd-effekt"
+    />
   </div>
 </template>
 

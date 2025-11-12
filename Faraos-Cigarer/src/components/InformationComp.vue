@@ -67,7 +67,7 @@ const isExpanded = ref(false)
 .read-more-btn {
     background: none;
     border: none;
-    color: #3396E6;
+    color: $color-tactical-blue;
     cursor: pointer;
     padding: 0;
     font-size: inherit;
