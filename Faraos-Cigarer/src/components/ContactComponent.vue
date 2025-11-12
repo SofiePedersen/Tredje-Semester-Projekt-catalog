@@ -2,25 +2,36 @@
 
 <template>
   <div class="opening-hours">
-    <p class="opening-hours__titel">ÅBNINGSTIDER</p>
-    <ul class="opening-hours__text">
-      <li>Hverdage: <br></br> Mandag - Fredag: 10:00 - 18:00</li>
-      <li>Weekendtider:<br></br> Lørdag - 10:00 - 17:00 <br></br> Søndag - 11:00 - 16:00</li>
-      <li>
+    <h3 class="opening-hours__titel">ÅBNINGSTIDER</h3>
+    <div class="opening-hours__text--breaks">
+      <p>Hverdage:</p>
+      <p>Mandag - Fredag: 10:00 - 18:00</p>
+    </div>
+    <div class="opening-hours__text--breaks">
+      <p>Weekendtider:</p>
+      <p>Lørdag - 10:00 - 17:00</p>
+      <p>Søndag - 11:00 - 16:00</p>
+    </div>
+    <div class="opening-hours__text--breaks">
+      <p>
         *Faraos Cigarer holder dog søndagslukket, når søndag falder på en
         helligdag.
-      </li>
-    </ul>
+      </p>
+    </div>
   </div>
 
   <div class="contact">
     <h3 class="contact__titel">KONTAKT</h3>
-    <div class="contact__text">
+    <div class="contact__text--breaks">
       <p>Faraos Cigarer - Odense</p>
       <p>Klostervej 3,</p>
       <p>5000 Odense C</p>
+    </div>
+    <div class="contact__text--breaks">
       <p>Telefon:</p>
       <p>+45 65 91 97 01</p>
+    </div>
+    <div class="contact__text--breaks">
       <p>E-mail:</p>
       <p>Odense@faraos.dk</p>
     </div>
@@ -48,23 +59,22 @@
 .opening-hours {
   margin: 2rem;
   padding: 2rem;
+  color: $color-newspaper-white;
   background-color: $color-anubis-black;
 }
 
-.opening-hours p {
+.opening-hours h3 {
   color: $color-pharaos-gold;
   font-family: $font-boogaloo;
   font-size: 2.44rem;
+  font-weight: 100;
 }
 
-.opening-hours ul {
-  color: $color-newspaper-white;
+.opening-hours p {
   font-family: $font-play;
-  padding-top: 0.5rem;
-  list-style: none;
 }
 
-.opening-hours li {
+.opening-hours__text--breaks {
   padding-top: 1rem;
 }
 
@@ -74,9 +84,11 @@
   background-color: $color-pharaos-gold;
 }
 
-
 .contact p {
   font-family: $font-play;
+}
+
+.contact__text--breaks {
   padding-top: 1rem;
 }
 
@@ -85,6 +97,7 @@
   font-family: $font-boogaloo;
   font-size: 2.44rem;
   -webkit-text-stroke: 0.1rem $color-anubis-black;
+  font-weight: 100;
 }
 
 .closing-days {
@@ -96,7 +109,7 @@
 }
 .closing-days ul {
   padding-top: 1rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 .closing-days li {
   padding-top: 1rem;
