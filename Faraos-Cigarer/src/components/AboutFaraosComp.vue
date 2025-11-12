@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="roar-image">
-        <img src="../assets/image/faraos-cigarer-roar.png" />
+        <img src="../assets/image/faraos-cigarer-roar.webp" />
     </div>
 </template>
 

@@ -69,20 +69,21 @@ onUnmounted(() => {
         alt="One piece merchandise"
       />
     </div>
-    <div v-show="currentIndex === 4">
+    <div v-show="currentIndex === 4" aria-label="5 ud af 5: reklamebillede af bogen Ensomme ulv - Flugten fra mørket ude nu">
       <img
         src="../assets/image/mobil_slideshow_5.webp"
         alt="The walking dead bind 10 med med Dansk version ude nu"
       />
     </div>
-    <div v-show="currentIndex === 5">
+    <div v-show="currentIndex === 5" aria-label="">
       <img
         src="../assets/image/mobil_slideshow_6.webp"
         alt="Ensomme ulv - Flugten fra mørket ude nu"
+        aria-label="5 ud af 5: reklamebillede af bogen Ensomme ulv - Flugten fra mørket ude nu"
       />
     </div>
 
-    <div class="slideshow__firkanter">
+    <div class="slideshow__firkanter" aria-label="Indikatorer">
       <button
         v-for="n in totalSlides"
         :key="n"
@@ -91,15 +92,15 @@ onUnmounted(() => {
       ></button>
     </div>
 
-    <div class="slideshow__control-bar">
-      <div class="slideshow__control-bar--controls">
-        <button @click="nextSlide(-1)">
+    <div class="slideshow__control-bar" aria-label="Kontrolpanel">
+      <div class="slideshow__control-bar--controls" aria-label="Styreknapper">
+        <button @click="nextSlide(-1)" aria-label="Forrige billede">
           <FontAwesomeIcon :icon="faAngleLeft" />
         </button>
-        <button @click="togglePause">
+        <button @click="togglePause" aria-label="Pause karrusel">
           <FontAwesomeIcon :icon="isPaused ? faPlay : faPause" />
         </button>
-        <button @click="nextSlide(1)">
+        <button @click="nextSlide(1)" aria-label="Næste billede">
           <FontAwesomeIcon :icon="faAngleRight" />
         </button>
       </div>

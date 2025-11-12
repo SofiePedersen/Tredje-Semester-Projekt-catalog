@@ -21,14 +21,14 @@ const categories = [
 </script>
 
 <template>
-  <section class="promo-section">
+  <div class="promo-section">
     <PromoCards
       v-for="(item, index) in categories"
       :key="index"
       :image="item.image"
       :title="item.title"
     />
-  </section>
+  </div>
 </template>
 
 <style scoped>

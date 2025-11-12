@@ -58,11 +58,12 @@ const toggleMenu = () => {
         }
 
         img {
+            transform: rotate(180deg);
             transition: transform 0.3s ease;
         }
 
         img.rotated {
-            transform: rotate(180deg);
+            transform: rotate(0deg);
         }
     }
 
