@@ -46,7 +46,7 @@ const menuItems = [
           </ul>
         </nav>
 
-        <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu">
+        <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
           <span></span>
           <span></span>
           <span></span>
