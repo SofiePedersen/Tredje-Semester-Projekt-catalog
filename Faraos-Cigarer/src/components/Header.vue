@@ -34,7 +34,7 @@ const burgerMenuSelection = ref([
   },
   {
     id: 'KlubFaraos',
-    title: 'KLUB FARÅOS',
+    title: 'KLUB FARAOS',
     items: [
       { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
       { id: 'f2', title: 'Odense', url: '/information' },
@@ -163,7 +163,7 @@ function toggleSection(id) {
     padding: 1rem;
     display: flex;
     align-items: center;
-    background-color: #000000;
+    background-color: $color-pharaos-gold;
 }
 
 .ham-menu {
@@ -241,7 +241,7 @@ function toggleSection(id) {
 .burgermenu__section--button {
   background: none;
   border: none;
-  color: $color-pharaos-gold;
+  color: white;
   font-size: 1.5rem;
   padding: 1rem;
   width: 100%;
@@ -251,12 +251,13 @@ function toggleSection(id) {
   justify-content: space-between;
   align-items: center;
   font-family: $font-boogaloo;
+  background-color: $color-anubis-black;
   cursor: pointer;
 }
 
 .listitem__controls {
   width: 100%;
-  background-color: $color-pharaos-gold;
+  background-color: $color-anubis-black;
 }
 
 .burgermenu__section__boks {
@@ -268,14 +269,15 @@ function toggleSection(id) {
 .burgermenu__links {
   text-decoration: none;
   font-family: $font-play;
-  color: $color-anubis-black;
+  color: white;
 }
 
-.burgermenu__sektion__listitem {
+.burgermenu__section__listitem {
   margin-left: 1rem;
+  list-style-type: none;
 }
 
-.burgermenu__sektion__listitem:first-of-type {
+.burgermenu__section__listitem:first-of-type {
   list-style-type: none;
   margin: 0;
   margin-bottom: 1rem;
