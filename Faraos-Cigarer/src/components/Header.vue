@@ -84,7 +84,6 @@ function toggleSection(id) {
           <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
           <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
           </form>
-
           <div class="header__icon__burgermenu">
           <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
           </div>
