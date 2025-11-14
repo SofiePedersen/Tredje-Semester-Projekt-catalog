@@ -284,9 +284,17 @@ import SocialsSection from "./SocialsSection.vue";
 }
 
 @media (min-width: 1200px) {
-  h2 {
-    text-align: left;
-    padding-left: 4rem;
+    .community-section {
+    padding: 14rem;
+    padding-top: 0rem;
+    padding-bottom: 4rem;
+  }
+
+  .community-section__e-label,
+  .community-section__klub-faraos,
+  .community-section__news,
+  .community-section__socials {
+    height: 14rem;
   }
 }
 </style>
