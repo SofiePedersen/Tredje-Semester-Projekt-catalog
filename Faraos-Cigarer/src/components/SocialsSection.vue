@@ -130,4 +130,13 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
     stroke-width: 1.3rem;
   }
 }
+
+@media (min-width: 1200px) {
+  .socials-section__facebook,
+  .socials-section__instagram,
+  .socials-section__tiktok,
+  .socials-section__twitter {
+    height: 6.5rem;
+  }
+}
 </style>
