@@ -219,15 +219,15 @@ button {
 
 @media (min-width: 1200px) {
   .desktop-text {
-    padding-left: 14rem;
+    padding-left: 20rem;
   }
 
   .roar-image {
-    padding-right: 14rem;
+    padding-right: 20rem;
   }
 
   .about-section {
-    padding-left: 14rem;
+    padding-left: 20rem;
   }
 }
 </style>

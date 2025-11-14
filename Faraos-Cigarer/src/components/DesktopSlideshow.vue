@@ -190,7 +190,7 @@ onUnmounted(() => {
 
 @media (min-width: 1200px) {
   .slideshow {
-    padding: 14rem;
+    padding: 20rem;
     padding-bottom: 0;
     padding-top: 0;
   }
@@ -200,7 +200,7 @@ onUnmounted(() => {
   }
 
   .slideshow__firkanter {
-    padding-left: 14rem;
+    padding-left: 20rem;
   }
 }
 </style>

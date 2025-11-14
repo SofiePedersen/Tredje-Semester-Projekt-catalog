@@ -52,8 +52,8 @@ const categories = [
 
 @media (min-width: 1200px) {
   .promo-section {
-    padding-left: 14rem;
-    padding-right: 14rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
   }
 }
 </style>
