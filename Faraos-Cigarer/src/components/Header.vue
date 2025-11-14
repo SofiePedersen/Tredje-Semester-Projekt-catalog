@@ -80,8 +80,17 @@ function toggleSection(id) {
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
           <RouterLink to="/">
-          <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
+             <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
           </RouterLink>
+          <form id="searchform">
+          <input class="header__input" type="text" placeholder="" aria-label="søgefelt"/>
+          <button class="header__icon__search"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
+          </form>
+
+          <div class="header__icon">
+          <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
+          </div>
+          
           <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
              aria-label="burgermenu punkter">
               <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
