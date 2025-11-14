@@ -56,7 +56,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
   height: 5rem;
   background-color: $color-pharaos-gold;
   color: $color-newspaper-white;
-  -webkit-text-stroke: 0.1rem $color-anubis-black;
+  -webkit-text-stroke: 0.07rem $color-anubis-black;
   font-family: $font-boogaloo;
   font-size: 2.44rem;
   cursor: pointer;
@@ -85,7 +85,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
   height: 5rem;
   background-color: $color-pharaos-gold;
   color: $color-newspaper-white;
-  -webkit-text-stroke: 0.1rem $color-anubis-black;
+  -webkit-text-stroke: 0.07rem $color-anubis-black;
   font-family: $font-boogaloo;
   font-size: 2.44rem;
   cursor: pointer;
@@ -98,7 +98,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 .socials-section__instagram :deep(svg),
 .socials-section__twitter :deep(svg) {
   stroke: $color-anubis-black;
-  stroke-width: 1rem;
+  stroke-width: 0.5rem;
 }
 
 @media (min-width: 601px) {
@@ -113,6 +113,21 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
   .socials-section__tiktok,
   .socials-section__twitter {
     width: calc(50% - 0.5rem);
+    font-size: 1.4rem;
+  }
+
+  .socials-section__facebook :deep(svg),
+  .socials-section__instagram :deep(svg),
+  .socials-section__tiktok :deep(svg),
+  .socials-section__twitter :deep(svg) {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .socials-section__instagram :deep(svg),
+  .socials-section__twitter :deep(svg) {
+    stroke-width: 1.3rem;
   }
 }
 </style>

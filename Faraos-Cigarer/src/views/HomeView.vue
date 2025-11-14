@@ -15,7 +15,6 @@ import DesktopSlideshow from "@/components/DesktopSlideshow.vue";
     <Promosection />
     <h2>FARAOS FÆLLESKAB</h2>
     <CommunitySection />
-    <SocialsSection />
     <AboutFaraosComp />
   </main>
 </template>
