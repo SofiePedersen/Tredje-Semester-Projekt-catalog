@@ -140,7 +140,7 @@ function toggleSection(id) {
   left: -500px;
   font-family: 'play';
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
