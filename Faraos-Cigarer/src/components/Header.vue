@@ -79,6 +79,9 @@ function toggleSection(id) {
 
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
+          <RouterLink to="/">
+          <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
+          </RouterLink>
           <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
              aria-label="burgermenu punkter">
               <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
