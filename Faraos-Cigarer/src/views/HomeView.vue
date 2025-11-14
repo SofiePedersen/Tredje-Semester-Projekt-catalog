@@ -20,10 +20,4 @@ import DesktopSlideshow from "@/components/DesktopSlideshow.vue";
   </main>
 </template>
 
-<style scoped>
-@media (min-width: 601px) {
-  .h2 {
-    text-align: left;
-  }
-}
-</style>
+<style scoped></style>
