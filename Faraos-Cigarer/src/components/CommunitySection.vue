@@ -55,12 +55,10 @@ import Community2 from "@/assets/image/community_2.webp";
   background-size: 42%;
   background-position: 0 0.09rem;
   opacity: 0.25;
-  z-index: 0;
 }
 
 .community-section__klub-faraos p {
   position: relative;
-  z-index: 1;
 }
 
 .community-section__e-label {
@@ -116,6 +114,10 @@ import Community2 from "@/assets/image/community_2.webp";
   .community-section__e-label {
     width: 48%;
     font-size: 2.2rem;
+  }
+
+  .community-section__e-label {
+    font-size: 1.9rem;
   }
 
   .community-section__klub-faraos::before {

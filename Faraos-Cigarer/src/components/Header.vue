@@ -229,7 +229,6 @@ function toggleSection(id) {
     margin: 25% 0;
 }
 
-
 .header__hammenu__searchtag:link, .header__hammenu__searchtag:visited, .header__hammenu__searchtag:hover, .header__hammenu__searchtag:active { 
     color: white; 
     text-decoration: none;
