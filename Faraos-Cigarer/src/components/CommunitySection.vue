@@ -1,22 +1,16 @@
 <script setup>
-import Community1 from "@/assets/image/community_1.webp";
 import Community2 from "@/assets/image/community_2.webp";
-import Community3 from "@/assets/image/community_3.webp";
 </script>
 
 <template>
-  <div class="community-section" aria-label="Community sektion">
+  <div class="community-section" aria-label="Fællesskab sektion">
     <div class="community-section__klub-faraos" aria-label="Klub Faraos knap">
       <p>KLUB FARAOS</p>
     </div>
 
     <div class="community-section__e-label" aria-label="E-mærket knap">
       <p>FARAOS ER E-MÆRKET</p>
-      <img
-        :src="Community2"
-        alt="Hjemmesiden er e-mærket"
-        aria-label="Hjemmesiden er e-mærket"
-      />
+      <img :src="Community2" alt="Hjemmesiden er e-mærket" aria-label="Hjemmesiden er e-mærket" />
     </div>
 
     <div class="community-section__news" aria-label="Nyheder knap">
@@ -103,5 +97,42 @@ import Community3 from "@/assets/image/community_3.webp";
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+@media (min-width: 601px) {
+  .community-section {
+    padding: 2rem;
+    padding-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  .community-section__klub-faraos,
+  .community-section__news,
+  .community-section__e-label {
+    width: 48%;
+    font-size: 2.2rem;
+  }
+
+  .community-section__klub-faraos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/image/community_1.webp");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: 0 0rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    text-align: left;
+    padding-left: 4rem;
+  }
 }
 </style>
