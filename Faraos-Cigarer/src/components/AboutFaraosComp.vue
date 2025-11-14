@@ -162,6 +162,11 @@ button {
 }
 
 @media (min-width: 601px) {
+  .about-section {
+    margin: 0;
+    padding-bottom: 0;
+  }
+
   .about-content {
     display: flex;
     flex-direction: row;
