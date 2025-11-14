@@ -79,6 +79,15 @@ function toggleSection(id) {
 
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
+          <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
+          <form id="searchform">
+          <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
+          <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
+          </form>
+          <div class="header__icon__burgermenu">
+          <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
+          </div>
+
           <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
              aria-label="burgermenu punkter">
               <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
@@ -122,10 +131,10 @@ function toggleSection(id) {
 @import '../assets/main.scss';
 
 .off-screen-menu {
-  background-color: #000000;
+  background-color: $color-pharaos-gold;
   height: 100vh;
   width: 100%;
-  max-width: 450px;
+  max-width: 480px;
   position: fixed;
   top: 0;
   left: -500px;
@@ -157,13 +166,6 @@ function toggleSection(id) {
 
 .off-screen-menu.active{
     left: 0;
-}
-
-#hammenu__nav {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    background-color: $color-pharaos-gold;
 }
 
 .ham-menu {
@@ -328,7 +330,29 @@ function toggleSection(id) {
   border: 2px solid $color-anubis-black;
 }
 
+.header__input__burgermenu {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-width: 3px;
+  font-size: 24px;
+  padding: 8px 40px 8px 20px;
+  border: 2px solid $color-anubis-black;
+}
+
 .header__icon__search {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header__icon__search__burgermenu {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -346,6 +370,12 @@ function toggleSection(id) {
   margin: auto;
 }
 
+.header__icon__burgermenu {
+  white-space: nowrap;
+  background-color: #000000;
+  margin: auto;
+}
+
 .header__icon__basket {
   height: 50px;
   width: 50px;
@@ -356,6 +386,19 @@ function toggleSection(id) {
   position: relative;
   background-color: black;
   color: white;
-  font-size: 28px;;
+  font-size: 28px;
+}
+
+.header__icon__basket__burgermenu {
+  height: 50px;
+  width: 50px;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  position: relative;
+  background-color: black;
+  color: white;
+  font-size: 28px;
 }
 </style>
