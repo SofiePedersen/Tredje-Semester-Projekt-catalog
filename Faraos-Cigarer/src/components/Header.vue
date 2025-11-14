@@ -60,6 +60,47 @@ const burgerMenuSelection = ref([
   },
 ]);
 
+const burgerMenuHelp = ref([
+  {
+    id: 'Kundeservice',
+    title: 'KUNDESERVICE',
+    items: [
+      { id: 'K1', title: 'Bøger og tegneserier', url: '#' },
+      { id: 'K2', title: 'Aarhus games', url: '#' },
+      { id: 'K3', title: 'Aarhus comics', url: '#' },
+    ],
+  },
+  {
+    id: 'aabningstider',
+    title: 'BUTIKKER & ÅBNINGSTIDER',
+    items: [
+      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
+      { id: 'f2', title: 'Odense', url: '/information' },
+    ],
+  },
+  {
+    id: 'om faraos',
+    title: 'OM FARAOS CIGARER',
+    items: [
+      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
+      { id: 's2', title: 'København comics & potter', url: '#' },
+      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
+      { id: 's4', title: 'København figurspil', url: '#' },
+    ],
+  },
+  {
+    id: 'kontakt os',
+    title: 'KONTAKT OS',
+    items: [
+      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
+      { id: 's2', title: 'København comics & potter', url: '#' },
+      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
+      { id: 's4', title: 'København figurspil', url: '#' },
+    ],
+  },
+]);
+
+
 const openSection = ref(null);
 
 function toggleSection(id) {
@@ -93,7 +134,7 @@ function toggleSection(id) {
                 <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
               </div>
             </div>
-        </div>
+          </div>
 
           <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
              aria-label="burgermenu punkter">
@@ -102,7 +143,26 @@ function toggleSection(id) {
                 <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
                 aria-label="åben/luk pil" />
               </button>
+      <transition name="slide-fade">
+        <div class="listitem__controls">
+          <ul v-if="openSection === section.id" class="burgermenu__section__boks" aria-label="informations boks">
+            <li v-for="item in section.items" :key="item.id" class="burgermenu__section__listitem">
+              <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
+            </li>
+          </ul>
+        </div>
+      </transition>
+    </div>
 
+          <h2 class="burgermenu__kundeservice__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
+
+          <div v-for="section in burgerMenuHelp" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
+             aria-label="burgermenu punkter">
+              <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
+                 {{ section.title }}
+                <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
+                aria-label="åben/luk pil" />
+              </button>
       <transition name="slide-fade">
         <div class="listitem__controls">
           <ul v-if="openSection === section.id" class="burgermenu__section__boks" aria-label="informations boks">
@@ -169,7 +229,6 @@ function toggleSection(id) {
     margin: 25% 0;
 }
 
-
 .header__hammenu__searchtag:link, .header__hammenu__searchtag:visited, .header__hammenu__searchtag:hover, .header__hammenu__searchtag:active { 
     color: white; 
     text-decoration: none;
@@ -190,10 +249,11 @@ function toggleSection(id) {
 .ham-menu__burgermenu {
     height: 50px;
     width: 50px;
-    margin: auto;
+    margin-right: 2rem;
     position: relative;
     background-color: black;
 }
+
 
 .ham-menu__burgermenu span{
     height: 2px;
@@ -341,6 +401,7 @@ function toggleSection(id) {
   justify-content: center;
   width:  290px;
   height: auto;
+  padding-bottom: 1rem;
 }
 
 #searchform {
@@ -438,5 +499,9 @@ function toggleSection(id) {
 
 .burgermenu__buttons .header__icon__basket__burgermenu {
   margin-left: 2rem;
+}
+
+.burgermenu__kundeservice__overskrift {
+  color: white;
 }
 </style>
