@@ -82,6 +82,11 @@ function toggleSection(id) {
           <div class="burgermenu__wrapper">
             <img alt="faraos logo" class="header__logo__burgermenu" src="../assets/image/faraos-cigarer-logo-svg.svg">
             <div class="burgermenu__buttons">
+              <div class="ham-menu__burgermenu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
               <form id="searchform">
                 <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
                 <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
@@ -182,10 +187,17 @@ function toggleSection(id) {
     margin: auto;
     position: relative;
     background-color: black;
-    z-index: 2;
 }
 
-.ham-menu span{
+.ham-menu__burgermenu {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    position: relative;
+    background-color: black;
+}
+
+.ham-menu__burgermenu span{
     height: 2px;
     width: 70%;
     background-color: white;
@@ -198,31 +210,37 @@ function toggleSection(id) {
     z-index: 2;
 }
 
+.ham-menu span{
+    height: 2px;
+    width: 70%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .ham-menu span:nth-child(1) {
     top: 25%;
-    z-index: 2;
 }
 
 .ham-menu span:nth-child(3) {
     top: 75%;
-    z-index: 2;
 }
 
-.ham-menu.active span:nth-child(1) {
+.ham-menu__burgermenu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    z-index: 2;
 }
 
-.ham-menu.active span:nth-child(2) {
+.ham-menu__burgermenu.active span:nth-child(2) {
     opacity: 0;
-    z-index: 2;
 }
 
-.ham-menu.active span:nth-child(3) {
+.ham-menu__burgermenu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    z-index: 2;
 }
 
 .burgermenu__section {
