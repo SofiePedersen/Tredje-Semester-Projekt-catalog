@@ -20,8 +20,6 @@ onMounted(() => {
   });
 });
 
-
-
 const burgerMenuSelection = ref([
   {
     id: 'Kategorier',
