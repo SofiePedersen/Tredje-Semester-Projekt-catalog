@@ -79,6 +79,7 @@ function toggleSection(id) {
 
       <div class="header__controls">
         <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
+          <div class="burgermenu__wrapper">
           <img alt="faraos logo" class="header__logo__burgermenu" src="../assets/image/faraos-cigarer-logo-svg.svg">
           <form id="searchform">
           <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
@@ -87,6 +88,7 @@ function toggleSection(id) {
           <div class="header__icon__burgermenu">
           <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
           </div>
+        </div>
 
           <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
              aria-label="burgermenu punkter">
@@ -141,12 +143,16 @@ function toggleSection(id) {
   font-family: 'play';
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 3rem;
   transition: .3s ease;
   z-index: 1;
+}
+
+.burgermenu__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 #menu {
@@ -174,6 +180,7 @@ function toggleSection(id) {
     margin: auto;
     position: relative;
     background-color: black;
+    z-index: 2;
 }
 
 .ham-menu span{
@@ -186,34 +193,34 @@ function toggleSection(id) {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .3s ease;
-    z-index: 1;
+    z-index: 2;
 }
 
 .ham-menu span:nth-child(1) {
     top: 25%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .ham-menu span:nth-child(3) {
     top: 75%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .ham-menu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    z-index: 1;
+    z-index: 2;
 }
 
 .ham-menu.active span:nth-child(2) {
     opacity: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    z-index: 1;
+    z-index: 2;
 }
 
 .burgermenu__section {
@@ -341,7 +348,6 @@ function toggleSection(id) {
 
 .header__input__burgermenu {
   width: 100%;
-  height: 100%;
   display: block;
   border-width: 3px;
   font-size: 24px;
