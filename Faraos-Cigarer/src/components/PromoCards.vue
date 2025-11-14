@@ -24,7 +24,7 @@ defineProps({
 }
 
 .promo-card img {
-  width: 400px;
+  width: 25rem;
   height: auto;
   object-fit: cover;
   box-shadow: 0.44rem 0.44rem rgba(0, 0, 0, 0.25);
@@ -50,5 +50,24 @@ defineProps({
 .promo-card button:hover {
   background-color: $color-pharaos-gold;
   color: $color-anubis-black;
+}
+
+@media (min-width: 601px) {
+  .promo-card img {
+    width: 100%;
+  }
+
+  .promo-card button {
+    width: fit-content;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    font-size: clamp(1rem, 2vw, 3rem);
+  }
+
+  @media (min-width: 1200px) {
+    .promo-card img {
+      width: 23rem;
+    }
+  }
 }
 </style>

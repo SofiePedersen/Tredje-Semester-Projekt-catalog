@@ -38,4 +38,14 @@ const categories = [
   justify-content: center;
   flex-wrap: wrap;
 }
+
+@media (min-width: 601px) {
+  .promo-section {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: row;
+    flex-wrap: nowrap;
+  }
+}
 </style>

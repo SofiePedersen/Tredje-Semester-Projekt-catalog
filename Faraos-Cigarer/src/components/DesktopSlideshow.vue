@@ -120,8 +120,7 @@ onUnmounted(() => {
 @import "../assets/main.scss";
 .slideshow {
   position: relative;
-  width: 100%;
-  max-width: 600px;
+  width: 75%;
   margin: 0 auto;
   display: none;
 }
@@ -168,7 +167,6 @@ onUnmounted(() => {
 
 .slideshow__control-bar {
   width: 100%;
-  max-width: 600px;
   background-color: #000000;
   padding: 0.6rem 0 0.6rem 2rem;
   display: flex;

@@ -19,3 +19,11 @@ import DesktopSlideshow from "@/components/DesktopSlideshow.vue";
     <OmFaraosComp />
   </main>
 </template>
+
+<style scoped>
+@media (min-width: 601px) {
+  .h2 {
+    text-align: left;
+  }
+}
+</style>
