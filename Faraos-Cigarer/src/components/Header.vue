@@ -83,17 +83,17 @@ function toggleSection(id) {
              <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
           </RouterLink>
           <form id="searchform">
-          <input class="header__input" type="text" placeholder="" aria-label="søgefelt"/>
-          <button class="header__icon__search"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
+          <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
+          <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
           </form>
 
-          <div class="header__icon">
-          <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
+          <div class="header__icon__burgermenu">
+          <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
           </div>
-          
-          <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
+
+          <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="togglemenu"
              aria-label="burgermenu punkter">
-              <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
+              <button class="burgermenu__section--button" @click="togglesection(section.id)" aria-label="åben/luk felt">
                  {{ section.title }}
                 <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
                 aria-label="åben/luk pil" />
@@ -340,7 +340,29 @@ function toggleSection(id) {
   border: 2px solid $color-anubis-black;
 }
 
+.header__input__burgermenu {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-width: 3px;
+  font-size: 24px;
+  padding: 8px 40px 8px 20px;
+  border: 2px solid $color-anubis-black;
+}
+
 .header__icon__search {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header__icon__search__burgermenu {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -358,6 +380,12 @@ function toggleSection(id) {
   margin: auto;
 }
 
+.header__icon__burgermenu {
+  white-space: nowrap;
+  background-color: #000000;
+  margin: auto;
+}
+
 .header__icon__basket {
   height: 50px;
   width: 50px;
@@ -368,6 +396,19 @@ function toggleSection(id) {
   position: relative;
   background-color: black;
   color: white;
-  font-size: 28px;;
+  font-size: 28px;
+}
+
+.header__icon__basket__burgermenu {
+  height: 50px;
+  width: 50px;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  position: relative;
+  background-color: black;
+  color: white;
+  font-size: 28px;
 }
 </style>
