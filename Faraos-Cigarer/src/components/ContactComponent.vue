@@ -51,13 +51,15 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
           <li>Langfredag</li>
           <li>Kristi Himmelfartsdag</li>
           <li>Grundlovsdag</li>
-          <div class="closing-days--content__text">
+        </ul>
+        <div class="closing-days--content__text">
+          <ul>
             <li>1. og 2. pinsedag</li>
             <li>Juleaftensdag</li>
             <li>1. og 2. juledag</li>
             <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
-          </div>
-        </ul>
+          </ul>
+        </div>
         <img
           :src="FaraosCigarerRoar"
           alt="Bil som laver en lyd"
