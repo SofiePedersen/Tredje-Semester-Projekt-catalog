@@ -40,24 +40,31 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
       </div>
     </div>
   </div>
-  <div class="closing-days" aria-label="Lukkedage for Faraos Cigarer">
-    <p>Faraos Cigarer holder desuden lukket de følgende dage:</p>
-    <ul>
-      <li>Nytårsdag</li>
-      <li>Skærtorsdag</li>
-      <li>Langfredag</li>
-      <li>Kristi Himmelfartsdag</li>
-      <li>Grundlovsdag</li>
-      <li>1. og 2. pinsedag</li>
-      <li>Juleaftensdag</li>
-      <li>1. og 2. juledag</li>
-      <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
-    </ul>
-    <img
-      :src="FaraosCigarerRoar"
-      alt="Bil som laver en lyd"
-      aria-label="Billede af en bil med lyd-effekt"
-    />
+
+  <div class="closing-days__wrapper">
+    <div class="closing-days" aria-label="Lukkedage for Faraos Cigarer">
+      <p>Faraos Cigarer holder desuden lukket de følgende dage:</p>
+      <div class="closing-days--content">
+        <ul>
+          <li>Nytårsdag</li>
+          <li>Skærtorsdag</li>
+          <li>Langfredag</li>
+          <li>Kristi Himmelfartsdag</li>
+          <li>Grundlovsdag</li>
+          <div class="closing-days--content__text">
+            <li>1. og 2. pinsedag</li>
+            <li>Juleaftensdag</li>
+            <li>1. og 2. juledag</li>
+            <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
+          </div>
+        </ul>
+        <img
+          :src="FaraosCigarerRoar"
+          alt="Bil som laver en lyd"
+          aria-label="Billede af en bil med lyd-effekt"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -124,11 +131,11 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
 }
 
 .closing-days img {
-  display: block;
-  margin: 1rem auto;
-  max-width: 100%;
+  margin-top: 2rem;
+  width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  max-width: 100%;
 }
 
 @media (min-width: 601px) {
@@ -136,6 +143,7 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
     display: flex;
     padding-left: 2rem;
     padding-right: 2rem;
+    gap: 2rem;
   }
 
   .opening-hours {
@@ -148,11 +156,44 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
     margin-left: 2rem;
     width: 30%;
   }
+
+  .closing-days__wrapper {
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .closing-days {
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  .closing-days--content {
+    display: flex;
+  }
+
+  .closing-days--content ul {
+    width: 50%;
+    padding-left: 0;
+    margin: 0;
+    list-style-position: inside;
+  }
+
+  .closing-days--content img {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width: 1200px) {
   .contact__wrapper {
     display: flex;
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
+  .closing-days__wrapper {
     padding-left: 20rem;
     padding-right: 20rem;
   }
