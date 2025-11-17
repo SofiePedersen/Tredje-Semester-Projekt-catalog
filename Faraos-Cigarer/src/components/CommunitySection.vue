@@ -231,12 +231,13 @@ import SocialsSection from "./SocialsSection.vue";
 .community-section__news {
   width: 100%;
   height: 11rem;
-  background-color: $color-anubis-black;
+  background-color: $color-pharaos-gold;
   background-image: url("@/assets/image/community_3.webp");
   background-repeat: no-repeat;
   background-position: 1rem center;
   color: $color-newspaper-white;
   font-family: $font-boogaloo;
+  -webkit-text-stroke: 0.1rem $color-anubis-black;
   font-size: 2.44rem;
   font-weight: 400;
   cursor: pointer;
@@ -270,6 +271,12 @@ import SocialsSection from "./SocialsSection.vue";
   .community-section__e-label {
     font-size: 1.9rem;
   }
+  
+  .community-section__news {
+    background-color: $color-anubis-black;
+    color: $color-pharaos-gold;
+    -webkit-text-stroke: 0rem $color-anubis-black;
+  }
 
   .community-section__klub-faraos::before {
     content: "";
@@ -277,7 +284,7 @@ import SocialsSection from "./SocialsSection.vue";
     inset: 0;
     background-image: url("../assets/image/community_1.webp");
     background-repeat: no-repeat;
-    background-size: 65%;
+    background-size: 75%;
     background-position: 0 0rem;
   }
 }
@@ -293,7 +300,7 @@ import SocialsSection from "./SocialsSection.vue";
   .community-section__klub-faraos,
   .community-section__news,
   .community-section__socials {
-    height: 20rem;
+    height: 12rem;
   }
 }
 </style>

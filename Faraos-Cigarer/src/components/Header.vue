@@ -20,88 +20,92 @@ onMounted(() => {
   });
 });
 
-const burgerMenuSelection = ref(
-[
-  {
-    "title": "Bøger og tegneserier",
-    "items": [
-      {
-        "title": "Tegneserier",
-        "items": [
-          { "title": "Amerikanske superhelte" },
-          { "title": "Europæiske klassikere" },
-          { "title": "Manga / Anime" },
-          { "title": "Uafhængige / graphic novels" }
-        ]
-      },
-      {
-        "title": "Bøger",
-        "items": [
-          { "title": "Science fiction" },
-          { "title": "Fantasy" },
-          { "title": "Horror" },
-          { "title": "Kunst- & referencebøger" },
-          { "title": "Magasiner & zines" }
-        ]
-      }
-    ]
-  },
+const booksAndComics = {
+  title: "Bøger og tegneserier",
+  items: [
+    {
+      title: "Tegneserier",
+      items: [
+        { title: "Amerikanske superhelte" },
+        { title: "Europæiske klassikere" },
+        { title: "Manga / Anime" },
+        { title: "Uafhængige / graphic novels" }
+      ]
+    },
+    {
+      title: "Bøger",
+      items: [
+        { title: "Science fiction" },
+        { title: "Fantasy" },
+        { title: "Horror" },
+        { title: "Kunst- & referencebøger" },
+        { title: "Magasiner & zines" }
+      ]
+    }
+  ]
+};
 
-  {
-    "title": "Retro",
-    "items": [
-      { "title": "Retrospil" },
-      { "title": "Vintage tegneserier" },
-      { "title": "Samleobjekter & figurer" },
-      { "title": "Brætspil fra 80/90'erne" },
-      { "title": "Brugte varer" }
-    ]
-  },
+const retro = {
+  title: "Retro",
+  items: [
+    { title: "Retrospil" },
+    { title: "Vintage tegneserier" },
+    { title: "Samleobjekter & figurer" },
+    { title: "Brætspil fra 80/90'erne" },
+    { title: "Brugte varer" }
+  ]
+};
 
-  {
-    "title": "Merchandise",
-    "items": [
-      { "title": "Samlefigurer" },
-      { "title": "Plakater & prints" },
-      { "title": "Tøj & accessories" },
-      { "title": "Krus, tasker & gadgets" },
-      { "title": "Nøgleringe & badges" },
-      {
-        "title": "Universer",
-        "items": [
-          { "title": "Star Wars" },
-          { "title": "Marvel" },
-          { "title": "Dungeons & Dragons" },
-          { "title": "Studio Ghibli" }
-        ]
-      }
-    ]
-  },
+const merchandise = {
+  title: "Merchandise",
+  items: [
+    { title: "Samlefigurer" },
+    { title: "Plakater & prints" },
+    { title: "Tøj & accessories" },
+    { title: "Krus, tasker & gadgets" },
+    { title: "Nøgleringe & badges" },
+    {
+      title: "Universer",
+      items: [
+        { title: "Star Wars" },
+        { title: "Marvel" },
+        { title: "Dungeons & Dragons" },
+        { title: "Studio Ghibli" }
+      ]
+    }
+  ]
+};
 
-  {
-    "title": "Spil",
-    "items": [
-      {
-        "title": "Brætspil",
-        "items": [
-          { "title": "Familiespil" },
-          { "title": "Strategispil" },
-          { "title": "Partyspil" },
-          { "title": "Solo-spil" }
-        ]
-      },
-      {
-        "title": "Rollespil",
-        "items": [
-          { "title": "Regelbøger" },
-          { "title": "Kampagner & scenarier" },
-          { "title": "Terninger & tilbehør" }
-        ]
-      }
-    ]
-  }
-]
-);
+const games = {
+  title: "Spil",
+  items: [
+    {
+      title: "Brætspil",
+      items: [
+        { title: "Familiespil" },
+        { title: "Strategispil" },
+        { title: "Partyspil" },
+        { title: "Solo-spil" }
+      ]
+    },
+    {
+      title: "Rollespil",
+      items: [
+        { title: "Regelbøger" },
+        { title: "Kampagner & scenarier" },
+        { title: "Terninger & tilbehør" }
+      ]
+    }
+  ]
+};
+
+const burgerMenuSelection = ref([
+  booksAndComics,
+  retro,
+  merchandise,
+  games
+]);
+
 const burgerMenuHelp = ref([
   {
     id: 'Kundeservice',
