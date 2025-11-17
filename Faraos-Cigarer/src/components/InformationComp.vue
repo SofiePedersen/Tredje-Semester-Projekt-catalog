@@ -149,14 +149,6 @@ button {
 }
 
 @media (min-width: 601px) {
-  .about-content {
-    display: none;
-  }
-
-  .about-content__desktop {
-    display: block;
-  }
-
   .information-comp__wrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -175,6 +167,16 @@ button {
     padding: 0;
     padding-left: 2rem;
     flex: 1;
+  }
+}
+
+@media (min-width: 800px) {
+  .about-content {
+    display: none;
+  }
+
+  .about-content__desktop {
+    display: block;
   }
 }
 
