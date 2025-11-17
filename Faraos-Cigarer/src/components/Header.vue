@@ -64,39 +64,18 @@ const burgerMenuHelp = ref([
   {
     id: 'Kundeservice',
     title: 'KUNDESERVICE',
-    items: [
-      { id: 'K1', title: 'Bøger og tegneserier', url: '#' },
-      { id: 'K2', title: 'Aarhus games', url: '#' },
-      { id: 'K3', title: 'Aarhus comics', url: '#' },
-    ],
   },
   {
     id: 'aabningstider',
     title: 'BUTIKKER & ÅBNINGSTIDER',
-    items: [
-      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
-      { id: 'f2', title: 'Odense', url: '/information' },
-    ],
   },
   {
     id: 'om faraos',
     title: 'OM FARAOS CIGARER',
-    items: [
-      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
-      { id: 's2', title: 'København comics & potter', url: '#' },
-      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
-      { id: 's4', title: 'København figurspil', url: '#' },
-    ],
   },
   {
     id: 'kontakt os',
     title: 'KONTAKT OS',
-    items: [
-      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
-      { id: 's2', title: 'København comics & potter', url: '#' },
-      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
-      { id: 's4', title: 'København figurspil', url: '#' },
-    ],
   },
 ]);
 
