@@ -128,7 +128,7 @@ const toggleMenu = () => {
     }
 
     .footer-lists .footer-lists__menu li .footer-lists__menu--links {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 </style>
