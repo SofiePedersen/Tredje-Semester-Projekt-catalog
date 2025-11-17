@@ -340,21 +340,28 @@ function toggleSection(id) {
   cursor: pointer;
 }
 
+.burgermenu__sektion__service{
+  display: flex;
+  justify-content: center;
+}
+
 .burgermenu__section__service--button {
   background: none;
   color: white;
   font-size: 1.5rem;
+  border: none;
   padding: 1rem;
   width: 70%;
   text-align: center;
+  margin: 2% 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   font-family: $font-boogaloo;
   background-color: $color-anubis-black;
-  margin: auto;
   cursor: pointer;
 }
+
+
 
 .listitem__controls {
   width: 100%;
