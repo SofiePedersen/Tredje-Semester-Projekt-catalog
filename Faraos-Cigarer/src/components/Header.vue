@@ -25,37 +25,88 @@ const burgerMenuSelection = ref([
     id: 'Kategorier',
     title: 'KATEGORIER',
     items: [
-      { id: 'K1', title: 'Bøger og tegneserier', url: '#' },
+      { 
+        id: 'K1', 
+        title: 'Bøger og tegneserier', 
+        url: '#',
+        subItems: [
+          { 
+          id: 'K1a', 
+          title: 'Bøger og Tegneserier', 
+          url: '#', 
+          subItems_1: [
+            { id: 'K1a1', title: 'Fantasy', url: '#' },
+            { id: 'K1a2', title: 'Science Fiction', url: '#' },
+            { id: 'K1a3', title: 'Manga', url: '#' },
+          ],
+          subItems_2: [
+            { id: 'K1b1', title: 'Graphic Novels', url: '#' },
+            { id: 'K1b2', title: 'Superhelte', url: '#' },
+            { id: 'K1b3', title: 'Humor', url: '#' },
+          ]
+        },
+      
+          
+        ]
+      },
+
+
+
+
+
+      
+      { id: 'K2', title: 'Aarhus games', url: '#' },
+      { id: 'K3', title: 'Aarhus comics', url: '#' },
+    ],
+  },
+  {
+    id: 'Kategorier',
+    title: 'KLUB FARAOS',
+    items: [
+      { 
+        id: 'K1', 
+        title: 'Bøger og tegneserier', 
+        url: '#',
+        subItems: [
+          { id: 'K1a', title: 'Fantasy', url: '#' },
+          { id: 'K1b', title: 'Science Fiction', url: '#' },
+          { id: 'K1c', title: 'Manga', url: '#' },
+        ]
+      },
       { id: 'K2', title: 'Aarhus games', url: '#' },
       { id: 'K3', title: 'Aarhus comics', url: '#' },
     ],
   },
   {
     id: 'KlubFaraos',
-    title: 'KLUB FARAOS',
+    title: 'NYHEDER',
     items: [
-      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
+      { 
+        id: 'f1', 
+        title: 'Find alle de lokale butikker på Fyn!', 
+        url: '#',
+        subItems: [
+          { id: 'f1a', title: 'Odense C', url: '#' },
+          { id: 'f1b', title: 'Odense V', url: '#' },
+        ]
+      },
       { id: 'f2', title: 'Odense', url: '/information' },
     ],
   },
   {
-    id: 'Nyheder',
-    title: 'NYHEDER',
-    items: [
-      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
-      { id: 's2', title: 'København comics & potter', url: '#' },
-      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
-      { id: 's4', title: 'København figurspil', url: '#' },
-    ],
-  },
-  {
-    id: 'Tilbud',
+    id: 'KlubFaraos',
     title: 'TILBUD',
     items: [
-      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
-      { id: 's2', title: 'København comics & potter', url: '#' },
-      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
-      { id: 's4', title: 'København figurspil', url: '#' },
+      { 
+        id: 'K1', 
+        title: 'Find alle de lokale butikker på Fyn!', 
+        url: '#',
+        subItems: [
+          { id: 'f1a', title: 'Odense C', url: '#' },
+          { id: 'f1b', title: 'Odense V', url: '#' },
+        ]
+      },
+      { id: 'f2', title: 'Odense', url: '/information' },
     ],
   },
 ]);
