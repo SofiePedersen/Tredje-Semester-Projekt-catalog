@@ -2,33 +2,36 @@
 import { ref } from 'vue';
 
 const props = defineProps({
-  title: {
-    type: String,
-    required: true
-  },
-  menuItems: {
-    type: Array,
-    required: true
-  }
+    title: {
+        type: String,
+        required: true
+    },
+    menuItems: {
+        type: Array,
+        required: true
+    }
 });
 
 const isOpen = ref(false);
 
 const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
+    isOpen.value = !isOpen.value;
 };
 </script>
 
 <template>
-    <div class="footer-lists" aria-label="Fold-ud menu" >
+    <div class="footer-lists" aria-label="Fold-ud menu">
         <div class="footer-lists--toggle" @click="toggleMenu" aria-label="Open og luk for fold-ud menuen">
             <h3>{{ title }}</h3>
-            <img src="../assets/icons/arrow-vector-icon.svg" alt="ikon af en knap som er toggle" :class="{ 'rotated': isOpen }" />
+            <img src="../assets/icons/arrow-vector-icon.svg" alt="ikon af en knap som er toggle"
+                :class="{ 'rotated': isOpen }" />
         </div>
-        <ul class="footer-lists__menu" :style="{ display: isOpen ? 'block' : 'none' }" aria-label="fold-ud menuer i footeren" >
+        <ul class="footer-lists__menu" :style="{ display: isOpen ? 'block' : 'none' }"
+            aria-label="fold-ud menuer i footeren">
             <li v-for="(item, index) in menuItems" :key="index">
-                <RouterLink class="footer-lists__menu--links" :to="item.link" aria-label="Linker til andre sider på hjemmesiden.">
-                  {{ item.text }}
+                <RouterLink class="footer-lists__menu--links" :to="item.link"
+                    aria-label="Linker til andre sider på hjemmesiden.">
+                    {{ item.text }}
                 </RouterLink>
             </li>
         </ul>
@@ -47,7 +50,6 @@ const toggleMenu = () => {
         padding: 1rem 2rem;
         justify-content: space-between;
         cursor: pointer;
-        margin-top: 2rem;
 
         h3 {
             font-family: $font-boogaloo;
@@ -99,11 +101,16 @@ const toggleMenu = () => {
     .footer-lists:first-of-type {
         padding-left: 15rem;
     }
-    
-    .footer-lists--toggle {
-        padding-left: 15rem;
+
+    .footer-lists:nth-child(4) {
+        padding-right: 15rem;
+    }
+
+    .footer-lists .footer-lists--toggle {
+        padding: 0;
         cursor: default;
         pointer-events: none;
+        margin-top: 2rem;
 
         img {
             display: none; // Hide the arrow on desktop
@@ -111,12 +118,17 @@ const toggleMenu = () => {
 
         h3 {
             margin-bottom: 1rem;
+            font-size: 1.8rem;
         }
     }
 
-    .footer-lists__menu {
+    .footer-lists .footer-lists__menu {
         display: block !important; // Always show menu on desktop
-        padding: 0;
+        padding: 0rem 0rem;
+    }
+
+    .footer-lists .footer-lists__menu li .footer-lists__menu--links {
+        font-size: 1rem;
     }
 }
 </style>

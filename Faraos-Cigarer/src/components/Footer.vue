@@ -241,8 +241,7 @@ footer {
     @media (min-width: 1201px) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: left;
-        gap: 2rem;
+        justify-content: space-between;
         max-width: 100%;
 
         .footer-info--wrapper {
@@ -259,8 +258,9 @@ footer {
 
         .footer-payments {
             width: 100%;
-            padding-top: 0rem;
-            padding-left: 13rem;
+            padding-top: 2rem;
+            padding-left: 15rem;
+            padding-bottom: 0.9rem;
             border-top: none;
             align-items: flex-start; // Align to the left
         }
@@ -270,13 +270,13 @@ footer {
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            padding: 2rem 13rem;
+            padding: 1.5rem 15rem;
             padding-top: 0rem;
 
             p, a {
                 color: $color-newspaper-white;
                 font-family: $font-play;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 text-decoration: none;
                 margin: 0;
             }
@@ -298,7 +298,7 @@ footer {
                 .footer-info--text {
                     color: $color-newspaper-white;
                     font-family: $font-play;
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                     margin: 0;
                 }
             }
