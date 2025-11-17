@@ -190,7 +190,7 @@ onUnmounted(() => {
 
 @media (min-width: 1200px) {
   .slideshow {
-    padding: 20rem;
+    padding: 15rem;
     padding-bottom: 0;
     padding-top: 0;
   }

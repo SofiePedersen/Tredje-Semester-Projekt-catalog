@@ -69,13 +69,13 @@
 
 @media (min-width: 1200px) {
   .breadcrumbs {
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 
   .map-container {
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 }
 </style>
