@@ -154,25 +154,14 @@ function toggleSection(id) {
       </transition>
     </div>
 
-          <h2 class="burgermenu__kundeservice__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
+          <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
 
-          <div v-for="section in burgerMenuHelp" :key="section.id" class="burgermenu__sektion" @click="toggleMenu"
+          <div v-for="section in burgerMenuHelp" :key="section.id" class="burgermenu__sektion__service" @click="toggleMenu"
              aria-label="burgermenu punkter">
-              <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
+              <button class="burgermenu__section__service--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
                  {{ section.title }}
-                <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
-                aria-label="åben/luk pil" />
               </button>
-      <transition name="slide-fade">
-        <div class="listitem__controls">
-          <ul v-if="openSection === section.id" class="burgermenu__section__boks" aria-label="informations boks">
-            <li v-for="item in section.items" :key="item.id" class="burgermenu__section__listitem">
-              <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
-            </li>
-          </ul>
-        </div>
-      </transition>
-    </div>
+          </div>
         </nav>
 
         <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
@@ -219,6 +208,15 @@ function toggleSection(id) {
     padding: 1rem;
     gap: 1rem;
 }
+
+.off-screen-menu { 
+    background-image: url("../assets/image/community_1.webp");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: 0 36rem;
+    background-image: reverse;
+}
+
 
 #menu {
     list-style: none;
@@ -339,6 +337,22 @@ function toggleSection(id) {
   align-items: center;
   font-family: $font-boogaloo;
   background-color: $color-anubis-black;
+  cursor: pointer;
+}
+
+.burgermenu__section__service--button {
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-boogaloo;
+  background-color: $color-anubis-black;
+  margin: auto;
   cursor: pointer;
 }
 
@@ -501,7 +515,7 @@ function toggleSection(id) {
   margin-left: 2rem;
 }
 
-.burgermenu__kundeservice__overskrift {
+.burgermenu__service__overskrift {
   color: white;
 }
 </style>
