@@ -3,42 +3,43 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
 </script>
 
 <template>
-  <div class="opening-hours" aria-label="Åbningstider for Faraos Cigarer">
-    <h3 class="opening-hours__titel">ÅBNINGSTIDER</h3>
-    <div class="opening-hours__text--breaks" aria-label="Hverdage">
-      <p>Hverdage:</p>
-      <p>Mandag - Fredag: 10:00 - 18:00</p>
+  <div class="contact__wrapper" aria-label="Åbningstider og kontakt">
+    <div class="opening-hours" aria-label="Åbningstider for Faraos Cigarer">
+      <h3 class="opening-hours__titel">ÅBNINGSTIDER</h3>
+      <div class="opening-hours__text--breaks" aria-label="Hverdage">
+        <p>Hverdage:</p>
+        <p>Mandag - Fredag: 10:00 - 18:00</p>
+      </div>
+      <div class="opening-hours__text--breaks" aria-label="Weekendtider">
+        <p>Weekendtider:</p>
+        <p>Lørdag - 10:00 - 17:00</p>
+        <p>Søndag - 11:00 - 16:00</p>
+      </div>
+      <div class="opening-hours__text--breaks" aria-label="Særlige lukkedage">
+        <p>
+          *Faraos Cigarer holder dog søndagslukket, når søndag falder på en
+          helligdag.
+        </p>
+      </div>
     </div>
-    <div class="opening-hours__text--breaks" aria-label="Weekendtider">
-      <p>Weekendtider:</p>
-      <p>Lørdag - 10:00 - 17:00</p>
-      <p>Søndag - 11:00 - 16:00</p>
-    </div>
-    <div class="opening-hours__text--breaks" aria-label="Særlige lukkedage">
-      <p>
-        *Faraos Cigarer holder dog søndagslukket, når søndag falder på en
-        helligdag.
-      </p>
+
+    <div class="contact" aria-label="Kontaktinformation for Faraos Cigarer">
+      <h3 class="contact__titel">KONTAKT</h3>
+      <div class="contact__text--breaks" aria-label="Adresse">
+        <p>Faraos Cigarer - Odense</p>
+        <p>Klostervej 3,</p>
+        <p>5000 Odense C</p>
+      </div>
+      <div class="contact__text--breaks" aria-label="Telefonnummer">
+        <p>Telefon:</p>
+        <p>+45 65 91 97 01</p>
+      </div>
+      <div class="contact__text--breaks" aria-label="E-mail adresse">
+        <p>E-mail:</p>
+        <p>Odense@faraos.dk</p>
+      </div>
     </div>
   </div>
-
-  <div class="contact" aria-label="Kontaktinformation for Faraos Cigarer">
-    <h3 class="contact__titel">KONTAKT</h3>
-    <div class="contact__text--breaks" aria-label="Adresse">
-      <p>Faraos Cigarer - Odense</p>
-      <p>Klostervej 3,</p>
-      <p>5000 Odense C</p>
-    </div>
-    <div class="contact__text--breaks" aria-label="Telefonnummer">
-      <p>Telefon:</p>
-      <p>+45 65 91 97 01</p>
-    </div>
-    <div class="contact__text--breaks" aria-label="E-mail adresse">
-      <p>E-mail:</p>
-      <p>Odense@faraos.dk</p>
-    </div>
-  </div>
-
   <div class="closing-days" aria-label="Lukkedage for Faraos Cigarer">
     <p>Faraos Cigarer holder desuden lukket de følgende dage:</p>
     <ul>
@@ -128,5 +129,32 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+@media (min-width: 601px) {
+  .contact__wrapper {
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .opening-hours {
+    margin: 0;
+    width: 70%;
+  }
+
+  .contact {
+    margin: 0;
+    margin-left: 2rem;
+    width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact__wrapper {
+    display: flex;
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
 }
 </style>

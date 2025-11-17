@@ -6,10 +6,21 @@ import InformationMap from "@/components/InformationMap.vue";
 
 <template>
   <InformationMap />
+  <h2 class="desktop_text">ÅBNINGSTIDER & KONTAKTINFORMATION</h2>
   <ContactComponent />
   <InformationComp />
 </template>
 
 <style lang="scss" scoped>
 @import "../assets/main.scss";
+
+.desktop_text {
+  display: none;
+}
+
+@media (min-width: 601px) {
+  .desktop_text {
+    display: block;
+  }
+}
 </style>
