@@ -118,15 +118,20 @@ function toggleCategory(id) {
             </button>
           <ul v-if="openSection === section.id" id="menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
             <li v-for="categoryItem in section.items" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
-            <button class="burgermenu__section--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
+            <button class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
                 {{ categoryItem.title }}
               <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openCategory === categoryItem.id }" class="burgermenu__ikon"
               aria-label="åben/luk pil" />
             </button>
               <div class="listitem__controls">
                 <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
-                  <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
+                  <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem__inner">
                     <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
+                    <ul v-if="item.items.length > 0" class="burgermenu__section__listitem" aria-label="underpunkter">
+                      <li v-for="Item in item.items" :key="Item.id" class="burgermenu__section__listitem">
+                        <RouterLink :to="Item.url" class="burgermenu__links">{{ Item.title }}</RouterLink>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -504,6 +509,27 @@ function toggleCategory(id) {
 
 .burgermenu__service__overskrift {
   color: white;
+}
+
+.burgermenu__section__listitem__inner {
+  margin-bottom: 2rem;
+}
+
+.burgermenu__section__inner--button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-play;
+  background-color: $color-anubis-black;
+  cursor: pointer;
 }
 
 @media (min-width: 601px) {
