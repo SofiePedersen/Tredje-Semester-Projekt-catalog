@@ -125,11 +125,11 @@ function toggleCategory(id) {
             </button>
               <div class="listitem__controls">
                 <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
-                  <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem__inner">
+                  <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
                     <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
-                    <ul v-if="item.items.length > 0" class="burgermenu__section__listitem" aria-label="underpunkter">
-                      <li v-for="Item in item.items" :key="Item.id" class="burgermenu__section__listitem">
-                        <RouterLink :to="Item.url" class="burgermenu__links">{{ Item.title }}</RouterLink>
+                    <ul v-if="item.items.length > 0" aria-label="underpunkter">
+                      <li v-for="Item in item.items" :key="Item.id" class="burgermenu__section__listitem__inner">
+                        <RouterLink :to="Item.url" class="burgermenu__links__inner">{{ Item.title }}</RouterLink>
                       </li>
                     </ul>
                   </li>
@@ -362,6 +362,7 @@ function toggleCategory(id) {
 .burgermenu__links {
   text-decoration: none;
   font-family: $font-play;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -514,6 +515,16 @@ function toggleCategory(id) {
 .burgermenu__section__listitem__inner {
   margin-bottom: 2rem;
 }
+
+.burgermenu__links__inner {
+  text-decoration: none;
+  font-family: $font-play;
+  font-size: 1rem;
+  margin-left: 2rem;
+  color: white;
+}
+
+
 
 .burgermenu__section__inner--button {
   background: none;
