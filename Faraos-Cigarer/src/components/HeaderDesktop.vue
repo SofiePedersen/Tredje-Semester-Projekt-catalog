@@ -1,5 +1,5 @@
 <script setup>
-import FaraosLogo from "@/assets/image/Faraos-cigarer-logo-svg.svg";
+import FaraosLogo from "@/assets/image/faraos-cigarer-logo-svg.svg";
 </script>
 
 <template>
@@ -7,8 +7,8 @@ import FaraosLogo from "@/assets/image/Faraos-cigarer-logo-svg.svg";
     <div class="header-logo">
       <img
         :src="FaraosLogo"
-        alt="Bil som laver en lyd"
-        aria-label="Billede af en bil med lyd-effekt"
+        alt="Logo for faraos"
+        aria-label="Billed af faraos logo"
       />
     </div>
   </header>
