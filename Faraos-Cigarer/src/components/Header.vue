@@ -1,16 +1,16 @@
 <script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { onMounted } from "vue";
-import  HeaderData  from "../Headerdata.json";
+import HeaderData from "../Headerdata.json";
 
 const isMenuActive = ref(false);
 const togglemenu = () => {
-  isMenuActive.value = !isMenuActive.value; 
+  isMenuActive.value = !isMenuActive.value;
 };
 
 const router = useRouter();
@@ -58,14 +58,11 @@ class MenuCategory {
   }
 }
 
-const burgerMenuSelection = HeaderData.map(obj =>
-  new MenuCategory(obj.id, obj.title, obj.items))
-
+const burgerMenuSelection = HeaderData.map(
+  (obj) => new MenuCategory(obj.id, obj.title, obj.items)
+);
 
 console.log(burgerMenuSelection);
-
-
-
 
 const openSection = ref(null);
 
@@ -78,87 +75,182 @@ function toggleSection(id) {
 function toggleCategory(id) {
   openCategory.value = openCategory.value === id ? null : id;
 }
-
-
 </script>
 
 <template>
   <header>
-
-    <div class="header">      
-        <RouterLink to="/">
-          <img alt="faraos logo" class="header__logo" src="../assets/image/faraos-cigarer-logo-svg.svg">
-        </RouterLink>
+    <div class="header">
+      <RouterLink to="/">
+        <img
+          alt="faraos logo"
+          class="header__logo"
+          src="../assets/image/faraos-cigarer-logo-svg.svg"
+        />
+      </RouterLink>
 
       <div class="header__controls">
-        <nav id="hammenu__nav" class="off-screen-menu" :class="{ active: isMenuActive }">
+        <nav
+          id="hammenu__nav"
+          class="off-screen-menu"
+          :class="{ active: isMenuActive }"
+        >
           <div class="burgermenu__wrapper">
-            <img alt="faraos logo" class="header__logo__burgermenu" src="../assets/image/faraos-cigarer-logo-svg.svg">
+            <img
+              alt="faraos logo"
+              class="header__logo__burgermenu"
+              src="../assets/image/faraos-cigarer-logo-svg.svg"
+            />
             <div class="burgermenu__buttons">
-              <div class="ham-menu__burgermenu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
+              <div
+                class="ham-menu__burgermenu"
+                :class="{ active: isMenuActive }"
+                @click="togglemenu"
+                aria-label="burgermenu knap"
+              >
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
               <form id="searchform">
-                <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
-                <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
+                <input
+                  class="header__input__burgermenu"
+                  type="text"
+                  placeholder=""
+                  aria-label="søgefelt"
+                />
+                <button class="header__icon__search__burgermenu">
+                  <FontAwesomeIcon
+                    :icon="faMagnifyingGlass"
+                    aria-label="søgikon"
+                  />
+                </button>
               </form>
               <div class="header__icon__burgermenu">
-                <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
+                <button class="header__icon__basket__burgermenu">
+                  <FontAwesomeIcon
+                    :icon="faCartShopping"
+                    aria-label="indkøbskurv"
+                  />
+                </button>
               </div>
             </div>
           </div>
 
-        <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
-          <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
-                {{ section.title }}
-              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
-              aria-label="åben/luk pil" />
+          <div
+            v-for="section in burgerMenuSelection"
+            :key="section.id"
+            class="burgermenu__sektion"
+            @click="toggleMenu"
+            aria-label="burgermenu punkter"
+          >
+            <button
+              class="burgermenu__section--button"
+              @click="toggleSection(section.id)"
+              aria-label="åben/luk felt"
+            >
+              {{ section.title }}
+              <FontAwesomeIcon
+                :icon="faAngleDown"
+                :class="{ 'rotate-180': openSection === section.id }"
+                class="burgermenu__ikon"
+                aria-label="åben/luk pil"
+              />
             </button>
-          <ul v-if="openSection === section.id" id="menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
-            <li v-for="categoryItem in section.items" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
-            <button class="burgermenu__section--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
-                {{ categoryItem.title }}
-              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openCategory === categoryItem.id }" class="burgermenu__ikon"
-              aria-label="åben/luk pil" />
+            <ul
+              v-if="openSection === section.id"
+              id="menu"
+              class="header__hammenu__list"
+              aria-label="burgermenu liste"
+            >
+              <li
+                v-for="categoryItem in section.items"
+                :key="categoryItem.id"
+                class="burgermenu__sektion"
+                @click="toggleMenu"
+                aria-label="burgermenu punkter"
+              >
+                <button
+                  class="burgermenu__section--button"
+                  @click="toggleCategory(categoryItem.id)"
+                  aria-label="åben/luk felt"
+                >
+                  {{ categoryItem.title }}
+                  <FontAwesomeIcon
+                    :icon="faAngleDown"
+                    :class="{ 'rotate-180': openCategory === categoryItem.id }"
+                    class="burgermenu__ikon"
+                    aria-label="åben/luk pil"
+                  />
+                </button>
+                <div class="listitem__controls">
+                  <ul
+                    v-if="openCategory === categoryItem.id"
+                    class="burgermenu__section__boks"
+                    aria-label="informations boks"
+                  >
+                    <li
+                      v-for="item in categoryItem.items"
+                      :key="item.id"
+                      class="burgermenu__section__listitem"
+                    >
+                      <RouterLink :to="item.url" class="burgermenu__links">{{
+                        item.title
+                      }}</RouterLink>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="burgermenu__service__overskrift">
+            HAR DU BRUG FOR HJÆLP?
+          </h2>
+
+          <div
+            v-for="section in burgerMenuHelp"
+            :key="section.id"
+            class="burgermenu__sektion__service"
+            @click="toggleMenu"
+            aria-label="burgermenu punkter"
+          >
+            <button
+              class="burgermenu__section__service--button"
+              @click="toggleSection(section.id)"
+              aria-label="åben/luk felt"
+            >
+              {{ section.title }}
             </button>
-              <div class="listitem__controls">
-                <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
-                  <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
-                    
-                    <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
-                  
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-          <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
-
-          <div v-for="section in burgerMenuHelp" :key="section.id" class="burgermenu__sektion__service" @click="toggleMenu"
-             aria-label="burgermenu punkter">
-              <button class="burgermenu__section__service--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
-                 {{ section.title }}
-              </button>
           </div>
         </nav>
 
-        <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
+        <div
+          class="ham-menu"
+          :class="{ active: isMenuActive }"
+          @click="togglemenu"
+          aria-label="burgermenu knap"
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
 
         <form id="searchform">
-        <input class="header__input" type="text" placeholder="" aria-label="søgefelt"/>
-        <button class="header__icon__search"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
+          <input
+            class="header__input"
+            type="text"
+            placeholder=""
+            aria-label="søgefelt"
+          />
+          <button class="header__icon__search">
+            <FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon" />
+          </button>
         </form>
 
         <div class="header__icon">
-        <button class="header__icon__basket"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
+          <button class="header__icon__basket">
+            <FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" />
+          </button>
         </div>
       </div>
     </div>
@@ -166,7 +258,7 @@ function toggleCategory(id) {
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/main.scss';
+@import "../assets/main.scss";
 
 .off-screen-menu {
   background-color: $color-pharaos-gold;
@@ -176,109 +268,110 @@ function toggleCategory(id) {
   position: fixed;
   top: 0;
   left: -500px;
-  font-family: 'play';
+  font-family: "play";
   display: flex;
   flex-direction: column;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 1;
 }
 
 .burgermenu__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
 }
 
-.off-screen-menu { 
-    background-image: url("../assets/image/community_1.webp");
-    background-repeat: no-repeat;
-    background-size: 65%;
-    background-position: 0 36rem;
-    background-image: reverse;
+.off-screen-menu {
+  background-image: url("../assets/image/community_1.webp");
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: 0 36rem;
+  background-image: reverse;
 }
-
 
 #menu {
-    list-style: none;
-    font-family: "play";
+  list-style: none;
+  font-family: "play";
 }
 
 .header__hammenu__list {
-    margin: 25% 0;
+  margin: 25% 0;
 }
 
-.header__hammenu__searchtag:link, .header__hammenu__searchtag:visited, .header__hammenu__searchtag:hover, .header__hammenu__searchtag:active { 
-    color: white; 
-    text-decoration: none;
+.header__hammenu__searchtag:link,
+.header__hammenu__searchtag:visited,
+.header__hammenu__searchtag:hover,
+.header__hammenu__searchtag:active {
+  color: white;
+  text-decoration: none;
 }
 
-.off-screen-menu.active{
-    left: 0;
+.off-screen-menu.active {
+  left: 0;
 }
 
 .ham-menu {
-    height: 50px;
-    width: 50px;
-    margin: auto;
-    position: relative;
-    background-color: black;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  position: relative;
+  background-color: black;
 }
 
 .ham-menu__burgermenu {
-    height: 50px;
-    width: 50px;
-    margin-right: 2rem;
-    position: relative;
-    background-color: black;
+  height: 50px;
+  width: 50px;
+  margin-right: 2rem;
+  position: relative;
+  background-color: black;
 }
 
-
-.ham-menu__burgermenu span{
-    height: 2px;
-    width: 70%;
-    background-color: white;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-    z-index: 2;
+.ham-menu__burgermenu span {
+  height: 2px;
+  width: 70%;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+  z-index: 2;
 }
 
-.ham-menu span{
-    height: 2px;
-    width: 70%;
-    background-color: white;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.ham-menu span {
+  height: 2px;
+  width: 70%;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ham-menu span:nth-child(1) {
-    top: 25%;
+  top: 25%;
 }
 
 .ham-menu span:nth-child(3) {
-    top: 75%;
+  top: 75%;
 }
 
 .ham-menu__burgermenu.active span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .ham-menu__burgermenu.active span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .ham-menu__burgermenu.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .burgermenu__section {
@@ -322,7 +415,7 @@ function toggleCategory(id) {
   cursor: pointer;
 }
 
-.burgermenu__sektion__service{
+.burgermenu__sektion__service {
   display: flex;
   justify-content: center;
 }
@@ -342,8 +435,6 @@ function toggleCategory(id) {
   background-color: $color-anubis-black;
   cursor: pointer;
 }
-
-
 
 .listitem__controls {
   width: 100%;
@@ -384,7 +475,7 @@ function toggleCategory(id) {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10px; 
+  gap: 10px;
   margin-top: 10px;
   margin-bottom: 5%;
 }
@@ -392,7 +483,7 @@ function toggleCategory(id) {
 .header__logo {
   display: flex;
   justify-content: center;
-  width:  290px;
+  width: 290px;
   height: auto;
   margin: auto;
   padding-bottom: 1rem;
@@ -402,7 +493,7 @@ function toggleCategory(id) {
 .header__logo__burgermenu {
   display: flex;
   justify-content: center;
-  width:  290px;
+  width: 290px;
   height: auto;
   padding-bottom: 1rem;
 }
@@ -506,5 +597,11 @@ function toggleCategory(id) {
 
 .burgermenu__service__overskrift {
   color: white;
+}
+
+@media (min-width: 601px) {
+  header {
+    display: none;
+  }
 }
 </style>
