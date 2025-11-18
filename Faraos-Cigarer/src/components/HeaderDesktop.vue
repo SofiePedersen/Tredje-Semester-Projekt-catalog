@@ -146,11 +146,18 @@ header {
 
 #searchform {
   background: grey;
-  border-radius: 25px;
   width: 60%;
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+.header__input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 1rem;
+  border: 2px solid $color-anubis-black;
 }
 
 @media (min-width: 1200px) {
