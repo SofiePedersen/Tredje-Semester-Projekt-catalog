@@ -1,36 +1,39 @@
 <script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { ref } from 'vue';
-import { RouterLink } from 'vue-router';
-
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
 const storeMapSections = ref([
   {
-    id: 'jylland',
-    title: 'JYLLAND',
+    id: "jylland",
+    title: "JYLLAND",
     items: [
-      { id: 'j1', title: 'Find alle de lokale butikker på Jylland!', url: '#' },
-      { id: 'j2', title: 'Aarhus games', url: '#' },
-      { id: 'j3', title: 'Aarhus comics', url: '#' },
+      { id: "j1", title: "Find alle de lokale butikker på Jylland!", url: "#" },
+      { id: "j2", title: "Aarhus games", url: "#" },
+      { id: "j3", title: "Aarhus comics", url: "#" },
     ],
   },
   {
-    id: 'fyn',
-    title: 'FYN',
+    id: "fyn",
+    title: "FYN",
     items: [
-      { id: 'f1', title: 'Find alle de lokale butikker på Fyn!', url: '#' },
-      { id: 'f2', title: 'Odense', url: '/information' },
+      { id: "f1", title: "Find alle de lokale butikker på Fyn!", url: "#" },
+      { id: "f2", title: "Odense", url: "/information" },
     ],
   },
   {
-    id: 'sjaelland',
-    title: 'SJÆLLAND',
+    id: "sjaelland",
+    title: "SJÆLLAND",
     items: [
-      { id: 's1', title: 'Find alle de lokale butikker på Sjælland!', url: '#' },
-      { id: 's2', title: 'København comics & potter', url: '#' },
-      { id: 's3', title: 'København bræt- & rollespil', url: '#' },
-      { id: 's4', title: 'København figurspil', url: '#' },
+      {
+        id: "s1",
+        title: "Find alle de lokale butikker på Sjælland!",
+        url: "#",
+      },
+      { id: "s2", title: "København comics & potter", url: "#" },
+      { id: "s3", title: "København bræt- & rollespil", url: "#" },
+      { id: "s4", title: "København figurspil", url: "#" },
     ],
   },
 ]);
@@ -42,41 +45,81 @@ function toggleSection(id) {
 }
 </script>
 
-
 <template>
   <div class="stores-wrapper">
     <nav class="breadcrumbs" aria-label="Navigations brødkrummer">
-      <RouterLink class="breadcrumbs__text" to="/" aria-label="Navigation til forsiden">Forside</RouterLink>
+      <RouterLink
+        class="breadcrumbs__text"
+        to="/"
+        aria-label="Navigation til forsiden"
+        >Forside</RouterLink
+      >
       <p class="breadcrumbs__text">></p>
-      <RouterLink class="breadcrumbs__text" to="/Butikker" aria-label="Navigation til oversigten over butikker">Butikker
+      <RouterLink
+        class="breadcrumbs__text"
+        to="/Butikker"
+        aria-label="Navigation til oversigten over butikker"
+        >Butikker
       </RouterLink>
       <p class="breadcrumbs__text">></p>
-      <RouterLink class="breadcrumbs__text" to="/Information" aria-label="Navigation til Odense butik">Odense
+      <RouterLink
+        class="breadcrumbs__text"
+        to="/Information"
+        aria-label="Navigation til Odense butik"
+        >Odense
       </RouterLink>
     </nav>
 
     <div class="map-container" aria-label="Google maps over butikkens lokation">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d577050.2589892185!2d10.37101225287178!3d55.60022845645195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sFaraos%20Cigarer!5e0!3m2!1sda!2sdk!4v1762941964703!5m2!1sda!2sdk"
-          width="100%" height="500rem" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d577050.2589892185!2d10.37101225287178!3d55.60022845645195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sFaraos%20Cigarer!5e0!3m2!1sda!2sdk!4v1762941964703!5m2!1sda!2sdk"
+        width="100%"
+        height="500rem"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
 
     <h2>HVOR VIL DU HEN?</h2>
 
-    <div v-for="section in storeMapSections" :key="section.id" class="butikker__sektion" @click="toggleMenu"
-      aria-label="landsdele sektioner">
-      <button class="butikker__sektion--knap" @click="toggleSection(section.id)" aria-label="åben/luk felt">
+    <div
+      v-for="section in storeMapSections"
+      :key="section.id"
+      class="butikker__sektion"
+      @click="toggleMenu"
+      aria-label="landsdele sektioner"
+    >
+      <button
+        class="butikker__sektion--knap"
+        @click="toggleSection(section.id)"
+        aria-label="åben/luk felt"
+      >
         {{ section.title }}
-        <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="butikker__ikon"
-          aria-label="åben/luk pil" />
+        <FontAwesomeIcon
+          :icon="faAngleDown"
+          :class="{ 'rotate-180': openSection === section.id }"
+          class="butikker__ikon"
+          aria-label="åben/luk pil"
+        />
       </button>
 
       <transition name="slide-fade">
         <div class="listitem__controls">
-          <ul v-if="openSection === section.id" class="butikker__sektion__boks" aria-label="informations boks">
-            <li v-for="item in section.items" :key="item.id" class="butikker__sektion__listitem">
-              <RouterLink :to="item.url" class="butikker__links">{{ item.title }}</RouterLink>
+          <ul
+            v-if="openSection === section.id"
+            class="butikker__sektion__boks"
+            aria-label="informations boks"
+          >
+            <li
+              v-for="item in section.items"
+              :key="item.id"
+              class="butikker__sektion__listitem"
+            >
+              <RouterLink :to="item.url" class="butikker__links">{{
+                item.title
+              }}</RouterLink>
             </li>
           </ul>
         </div>
@@ -96,7 +139,7 @@ function toggleSection(id) {
 .breadcrumbs {
   display: flex;
   justify-content: flex-start;
-  padding:0rem 0rem 2rem 0rem;
+  padding: 0rem 0rem 2rem 0rem;
 
   p {
     margin-left: 0.5rem;
@@ -140,7 +183,6 @@ function toggleSection(id) {
   transform: rotate(180deg);
 }
 
-
 .butikker__sektion--knap {
   background: none;
   border: none;
@@ -182,5 +224,35 @@ function toggleSection(id) {
   list-style-type: none;
   margin: 0;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 601px) {
+  .breadcrumbs {
+    padding-left: 2rem;
+  }
+
+  .map-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .stores-wrapper {
+    padding: 0;
+  }
+
+  .butikker__sektion {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .breadcrumbs {
+    padding-left: 15rem;
+  }
+
+  .map-container {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
 }
 </style>

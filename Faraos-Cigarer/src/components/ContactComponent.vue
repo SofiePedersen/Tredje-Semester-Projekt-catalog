@@ -58,7 +58,11 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
           <li>1. og 2. juledag</li>
           <li>Nytårsaftensdag (Lukker fra kl. 15)</li>
         </ul>
-        <img :src="FaraosCigarerRoar" alt="Bil som laver en lyd" aria-label="Billede af en bil med lyd-effekt" />
+        <img
+          :src="FaraosCigarerRoar"
+          alt="Bil som laver en lyd"
+          aria-label="Billede af en bil med lyd-effekt"
+        />
       </div>
     </div>
   </div>
@@ -120,7 +124,6 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
 }
 
 .closing-days ul {
-  padding-top: 1rem;
   padding-left: 1.5rem;
 }
 
@@ -175,7 +178,6 @@ import FaraosCigarerRoar from "@/assets/image/faraos-cigarer-roar.webp";
     margin: 0;
     margin-right: 1rem;
     list-style-position: inside;
-    font-size: clamp(0.8rem, 1rem + 0.5vw, 1.3rem);
   }
 
   .closing-days--content img {

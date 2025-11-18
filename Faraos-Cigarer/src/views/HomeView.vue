@@ -2,7 +2,6 @@
 import Slideshow from "../components/Slideshow.vue";
 import Promosection from "@/components/PromoSection.vue";
 import CommunitySection from "@/components/CommunitySection.vue";
-import SocialsSection from "@/components/SocialsSection.vue";
 import AboutFaraosComp from "@/components/AboutFaraosComp.vue";
 import DesktopSlideshow from "@/components/DesktopSlideshow.vue";
 </script>
