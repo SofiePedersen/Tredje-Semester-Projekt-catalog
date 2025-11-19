@@ -137,6 +137,12 @@ console.log(burgerMenuSelection)
 
           <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
 
+        <div class="burgermenu__section__service">
+          <button class="burgermenu__section__service--button">Kundeservice</button>
+          <button class="burgermenu__section__service--button">Butikker & åbningstider</button>
+          <button class="burgermenu__section__service--button">Om Faraos Cigarer</button>
+          <button class="burgermenu__section__service--button">Kontakt os</button>
+        </div>
 
         </nav>
 
@@ -316,23 +322,21 @@ console.log(burgerMenuSelection)
   cursor: pointer;
 }
 
-.burgermenu__sektion__service{
+.burgermenu__section__service{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .burgermenu__section__service--button {
-  background: none;
   color: white;
   font-size: 1.5rem;
   border: none;
-  padding: 1rem;
-  width: 70%;
-  text-align: center;
+  padding: 0.5rem;
+  text-align: left;
+  width: 80%;
   margin: 2% 0;
-  display: flex;
-  justify-content: space-between;
-  font-family: $font-boogaloo;
+  font-family: $font-play;
   background-color: $color-anubis-black;
   cursor: pointer;
 }
