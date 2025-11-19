@@ -11,11 +11,12 @@ import MegamenuComp from "./MegamenuComp.vue";
   <header>
     <div class="header-logo-mini-wrapper">
       <div class="header-logo">
-        <img
-          :src="FaraosLogo"
-          alt="Logo for faraos"
-          aria-label="Billed af faraos logo"
-        />
+        <RouterLink to="/#">
+          <img
+            :src="FaraosLogo"
+            alt="Logo for faraos"
+            aria-label="Billed af faraos logo"
+        /></RouterLink>
       </div>
       <div class="header-mini-navigation">
         <ul>
@@ -94,6 +95,7 @@ header {
   width: 100%;
   box-shadow: 0rem 0.4rem rgba(0, 0, 0, 0.25);
   display: none;
+  margin-bottom: 1rem;
 }
 
 .header-logo-mini-wrapper {
