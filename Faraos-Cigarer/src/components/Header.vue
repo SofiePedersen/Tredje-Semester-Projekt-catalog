@@ -6,7 +6,8 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { onMounted } from "vue";
-import  HeaderData  from "../Headerdata.json";
+import  HeaderData  from "../HeaderData.json";
+import HeaderDataTwo from "../HeaderDataTwo.json";
 
 const isMenuActive = ref(false);
 const togglemenu = () => {
@@ -40,8 +41,11 @@ class MenuCategory {
 const burgerMenuSelection = HeaderData.map(obj =>
   new MenuCategory(obj.id, obj.title, obj.items))
 
+const burgerMenuDataTwo = HeaderDataTwo.map(obj =>
+  new MenuCategory(obj.id, obj.title, obj.items))
 
 
+const categoryId = ref(0);
 
 
 const openSection = ref(null);
@@ -56,7 +60,7 @@ function toggleCategory(id) {
   openCategory.value = openCategory.value === id ? null : id;
 }
 
-
+console.log(burgerMenuSelection)
 </script>
 
 <template>
@@ -87,14 +91,14 @@ function toggleCategory(id) {
             </div>
           </div>
 
-        <div v-for="section in burgerMenuSelection" :key="section.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
-          <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
-                {{ section.title }}
-              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
+        <div class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
+          <button class="burgermenu__section--button" @click="toggleSection(categoryId)" aria-label="åben/luk felt">
+                {{ "Kategorier" }}
+              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === categoryId }" class="burgermenu__ikon"
               aria-label="åben/luk pil" />
             </button>
-          <ul v-if="openSection === section.id" id="menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
-            <li v-for="categoryItem in section.items" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
+          <ul v-if="openSection === categoryId" id="menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
+            <li v-for="categoryItem in burgerMenuSelection" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
             <button class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
                 {{ categoryItem.title }}
               <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openCategory === categoryItem.id }" class="burgermenu__ikon"
@@ -104,9 +108,9 @@ function toggleCategory(id) {
                 <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
                   <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
                     <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
-                    <ul v-if="openCategory === categoryItem.id">
-                      <li v-for="item in item.items" :key="item.id" class="burgermenu__section__listitem__inner">
-                        <RouterLink :to="item.url" class="burgermenu__links__inner">{{ item.title }}</RouterLink>
+                    <ul v-if="openCategory === categoryItem.id"> 
+                      <li v-for="innersection in item.items" :key="innersection.id" class="burgermenu__section__listitem__inner">
+                        <RouterLink :to="innersection.url" class="burgermenu__links__inner">{{ innersection.title }}</RouterLink>
                       </li>
                     </ul>
                   </li>
@@ -115,8 +119,25 @@ function toggleCategory(id) {
             </li>
           </ul>
         </div>
+        
+        <div v-for="section in burgerMenuDataTwo" :key="section.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
+          <button class="burgermenu__section--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
+                {{ section.title }}
+              <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === section.id }" class="burgermenu__ikon"
+              aria-label="åben/luk pil" />
+            </button>
+          <ul v-if="openSection === section.id" id="menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
+            <li v-for="categoryItem in section.items" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
+            <p class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
+                {{ categoryItem.title }}
+            </p>
+            </li>
+          </ul>
+        </div>
 
           <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
+
+
         </nav>
 
         <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
@@ -512,6 +533,7 @@ function toggleCategory(id) {
   background-color: $color-anubis-black;
   cursor: pointer;
 }
+
 
 @media (min-width: 800px) {
   header {
