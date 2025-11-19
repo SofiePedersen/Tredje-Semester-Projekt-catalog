@@ -43,7 +43,8 @@
 .breadcrumbs {
   display: flex;
   justify-content: flex-start;
-  padding: 0.5rem 2rem 0rem 2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
 
   p {
     margin-left: 0.5rem;

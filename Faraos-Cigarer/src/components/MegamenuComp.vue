@@ -33,16 +33,17 @@ const loadList = (category) => {
 
         <div class="megamenu" :class="{ 'megamenu-open': isOpen }">
             <div class="category-buttons">
-                <button @click="loadList('fruits')">Fruits</button>
-                <button @click="loadList('animals')">Animals</button>
-                <button @click="loadList('colors')">Colors</button>
-                <button @click="loadList('vehicles')">Vehicles</button>
-                <button @click="loadList('frameworks')">Frameworks</button>
+                <button @click="loadList('fruits')">Bøger & Tegneserier</button>
+                <button @click="loadList('animals')">Retro</button>
+                <button @click="loadList('colors')">Merchandise</button>
+                <button @click="loadList('vehicles')">Spil</button>
+                <button @click="loadList('frameworks')">Udklædning</button>
             </div>
 
             <div v-if="currentList.length === 0" class="shown-message">
                 <h3 class="msg-title">Hvad er du på udkig efter?</h3>
-                <p class="msg-text">Klik på kategorierne, til venstre for at finde lige netop det produkt du leder efter!</p>
+                <p class="msg-text">Klik på kategorierne, til venstre for at finde lige netop det produkt du leder
+                    efter!</p>
                 <p class="msg-text"><span class="qoute-style">"You have the high ground now" - Faraos Cigarer</span></p>
             </div>
 
@@ -60,7 +61,7 @@ const loadList = (category) => {
 .megamenu-container {
     position: relative;
     display: inline-block;
-    
+
     .cat-button {
         background-color: $color-anubis-black;
         color: $color-newspaper-white;
@@ -75,58 +76,76 @@ const loadList = (category) => {
         gap: 1rem;
         transition: background-color 0.1s ease;
         box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
-    
+
     }
 
     .cat-button-open {
         background-color: #efd17a;
     }
-    
+
     .cat-arrow {
         transform: rotate(180deg);
         transition: transform 0.3s ease;
     }
-    
+
     .cat-arrow-open {
         transform: rotate(0deg);
     }
-    
+
     .megamenu {
         position: absolute;
         top: 120%;
         width: 100vw;
         margin-left: -2rem;
-        min-width: 200px;
         background-color: $color-pharaos-gold;
         transform: scaleY(0);
         transform-origin: top;
         transition: transform 0.3s ease;
         opacity: 0;
         z-index: 100;
-        padding: 1rem;
-        
-        .megamenu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        display: flex;
+        gap: 1rem;
+
+        .shown-message {
+            margin: 2rem;
+            margin-left: 0;
+            background-color: $color-anubis-black;
+            color: $color-newspaper-white;
         }
 
-        .megamenu li {
-            padding: 0.5rem 1rem;
-            cursor: pointer;
+        .category-buttons {
+            padding: 2rem;
+            padding-right: 0;
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            gap: 1rem;
+            
+            button {
+                box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
+                background-color: $color-anubis-black;
+                color: $color-newspaper-white;
+                padding: 1rem;
+                font-family: $font-boogaloo;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                border: none;
+            }
+
+            button:hover {
+                background-color: $color-newspaper-white;
+                color: $color-tactical-blue;
+            }
         }
-        
-        .megamenu li:hover {
-            background-color: $color-tactical-blue;
-        }
+
     }
-    
+
     .megamenu-open {
         transform: scaleY(1);
         opacity: 1;
         box-shadow: 0rem 0.3rem rgba(0, 0, 0, 0.25);
     }
-    
+
     .decoration {
         display: none;
         background-color: #efd17a;
@@ -135,7 +154,7 @@ const loadList = (category) => {
         position: absolute;
         box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
     }
-    
+
     .decoration-open {
         display: block;
         transform: scaleY(1);

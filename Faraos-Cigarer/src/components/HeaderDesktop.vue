@@ -95,7 +95,6 @@ header {
   width: 100%;
   box-shadow: 0rem 0.4rem rgba(0, 0, 0, 0.25);
   display: none;
-  margin-bottom: 1rem;
 }
 
 .header-logo-mini-wrapper {
