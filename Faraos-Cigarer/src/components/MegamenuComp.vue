@@ -176,7 +176,7 @@ const loadList = (category) => {
         display: none;
         background-color: #efd17a;
         width: 8.9rem;
-        height: 20rem;
+        height: 2rem;
         position: absolute;
         box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
     }
