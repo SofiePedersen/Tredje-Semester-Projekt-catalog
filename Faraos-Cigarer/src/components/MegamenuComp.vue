@@ -1,70 +1,3 @@
-<!-- <script setup>
-import { ref } from 'vue'
-
-const isOpen = ref(false)
-
-const toggleMenu = () => {
-    isOpen.value = !isOpen.value
-}
-</script>
-
-<template>
-    <RouterLink class="button-wrapper" :class="{ 'button-wrapper-open': isOpen }" @click="toggleMenu" to="/#">
-        <button class="category--button" :class="{ 'cat-button-open': isOpen }">
-            KATEGORIER
-        </button>
-
-        <img class="category--image" src="../assets/icons/arrow-vector-icon.svg" alt="arrow"
-            :class="{ 'cat-arrow-open': isOpen }" />
-    </RouterLink>
-</template>
-
-<style lang="scss">
-@import "../assets/main.scss";
-
-.button-wrapper {
-    background-color: $color-anubis-black;
-    min-width: 6rem;
-    box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    margin-right: -1rem;
-    z-index: 1;
-}
-
-.button-wrapper-open {
-    background-color: #efd17a;
-    border-bottom: 2rem solid #efd17a;
-}
-
-.category--button {
-    background-color: $color-anubis-black;
-    padding: 1rem;
-    border: none;
-    color: $color-newspaper-white;
-    font-family: $font-boogaloo;
-    font-size: 1rem;
-    padding-right: 0rem;
-}
-
-.cat-button-open {
-    background-color: #efd17a;
-}
-
-.category--image {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-    padding: 1rem;
-    color: black;
-}
-
-.cat-arrow-open {
-    transform: rotate(0deg);
-}
-</style> -->
-
 <script setup>
 import { ref } from 'vue'
 
@@ -139,7 +72,6 @@ const toggleMenu = () => {
 .megamenu {
     position: absolute;
     top: 120%;
-    // left: 0;
     width: 100vw;
     margin-left: -2rem;
     min-width: 200px;
