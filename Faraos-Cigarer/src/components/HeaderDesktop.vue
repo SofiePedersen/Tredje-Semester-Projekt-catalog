@@ -202,7 +202,7 @@ header {
   cursor: pointer;
 }
 
-@media (min-width: 801px) {
+@media (min-width: 800px) {
   header {
     display: block;
   }
