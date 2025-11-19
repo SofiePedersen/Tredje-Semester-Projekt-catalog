@@ -117,7 +117,6 @@ function toggleCategory(id) {
         </div>
 
           <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
-      
         </nav>
 
         <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
@@ -514,7 +513,7 @@ function toggleCategory(id) {
   cursor: pointer;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 800px) {
   header {
     display: none;
   }
