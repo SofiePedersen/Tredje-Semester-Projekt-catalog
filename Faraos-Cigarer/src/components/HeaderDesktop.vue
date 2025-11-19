@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { RouterLink } from "vue-router";
+import MegamenuComp from "./MegamenuComp.vue";
 </script>
 
 <template>
@@ -49,7 +50,7 @@ import { RouterLink } from "vue-router";
     <div class="header-buttons-search-wrapper">
       <div class="header-button_wrapper">
         <ul>
-          <li><RouterLink to="/#" class="button">KATEGORIER</RouterLink></li>
+          <MegamenuComp />
           <li><RouterLink to="/#" class="button">KLUB FARAO</RouterLink></li>
           <li><RouterLink to="/#" class="button">NYHEDER</RouterLink></li>
           <li><RouterLink to="/#" class="button">TILBUD</RouterLink></li>
