@@ -61,13 +61,6 @@ function toggleSection(id) {
         aria-label="Navigation til oversigten over butikker"
         >Butikker
       </RouterLink>
-      <p class="breadcrumbs__text">></p>
-      <RouterLink
-        class="breadcrumbs__text"
-        to="/Information"
-        aria-label="Navigation til Odense butik"
-        >Odense
-      </RouterLink>
     </nav>
 
     <div class="map-container" aria-label="Google maps over butikkens lokation">
@@ -140,6 +133,7 @@ function toggleSection(id) {
   display: flex;
   justify-content: flex-start;
   padding: 0rem 0rem 2rem 0rem;
+  margin-top: 1rem;
 
   p {
     margin-left: 0.5rem;
