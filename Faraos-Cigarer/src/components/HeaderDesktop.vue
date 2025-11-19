@@ -56,7 +56,7 @@ import { RouterLink } from "vue-router";
         </ul>
       </div>
       <div class="search-basket">
-        <form id="searchform">
+        <form class="header-searchform">
           <input
             class="header__input"
             type="text"
@@ -83,7 +83,6 @@ import { RouterLink } from "vue-router";
 header {
   width: 100%;
   box-shadow: 0rem 0.4rem rgba(0, 0, 0, 0.25);
-  background-color: aqua;
 }
 
 .header-logo-mini-wrapper {
@@ -96,7 +95,7 @@ header {
 .header-logo-mini-wrapper ul {
   display: flex;
   padding-top: 1rem;
-  gap: 1rem;
+  gap: 0.8rem;
 
   li {
     list-style-type: none;
@@ -105,26 +104,29 @@ header {
       text-decoration: none;
       font-family: $font-play;
       color: $color-anubis-black;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
+      white-space: nowrap;
     }
   }
 }
 
 .header-logo-mini-wrapper img {
   width: 100%;
+  min-width: 15rem;
   padding: 2rem 0rem;
 }
 
 .header-buttons-search-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .header-button_wrapper {
   ul {
     display: flex;
     gap: 1rem;
-    margin-left: 2rem;
     margin-bottom: 1rem;
 
     li {
@@ -135,6 +137,7 @@ header {
       background-color: $color-anubis-black;
       text-align: center;
       box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+      white-space: nowrap;
 
       .button {
         text-decoration: none;
@@ -144,36 +147,55 @@ header {
   }
 }
 
-#searchform {
+.search-basket {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.header-searchform {
   background: grey;
-  width: 60%;
+  width: 85%;
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 3.3rem;
+  box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
 .header__input {
-  width: 100%;
+  flex: 1;
   height: 100%;
-  display: block;
-  font-size: 1rem;
-  border: 2px solid $color-anubis-black;
+  width: 60%;
+  font-size: 1.5rem;
+  border-color: $color-anubis-black;
+  background: white;
+  color: $color-anubis-black;
 }
 
-@media (min-width: 1200px) {
-  .header-logo-mini-wrapper {
-    margin-left: 15rem;
-    margin-right: 15rem;
-  }
+.header__icon__search {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: $color-anubis-black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-  .header-buttons-search-wrapper {
-    margin-left: 15rem;
-    margin-right: 15rem;
-  }
-  .header-button_wrapper {
-    ul {
-      margin-left: 0;
-    }
-  }
+.header__icon__basket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem;
+  border: none;
+  background-color: $color-anubis-black;
+  color: $color-newspaper-white;
+  box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 </style>
