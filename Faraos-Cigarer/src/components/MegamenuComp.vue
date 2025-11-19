@@ -17,6 +17,9 @@ const toggleMenu = () => {
         <img class="cat-arrow" src="../assets/icons/arrow-vector-icon.svg" alt="arrow"
             :class="{ 'cat-arrow-open': isOpen }" />
     </RouterLink>
+    <div class="">
+
+    </div>
 </template>
 
 <style lang="scss">
@@ -30,10 +33,12 @@ const toggleMenu = () => {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    margin-right: -1rem;
 }
 
 .button-wrapper-open {
     background-color: #efd17a;
+    border-bottom: 2rem solid #efd17a;
 }
 
 .cat-button {
@@ -48,16 +53,16 @@ const toggleMenu = () => {
 
 .cat-button-open {
     background-color: #efd17a;
-    color: black;
 }
 
 .cat-arrow {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
     padding: 1rem;
+    color: black;
 }
 
 .cat-arrow-open {
-    transform: rotate(0deg);    
+    transform: rotate(0deg);
 }
 </style>
