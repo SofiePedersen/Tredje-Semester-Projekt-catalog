@@ -58,11 +58,11 @@ class MenuCategory {
   }
 }
 
+
+
 const burgerMenuSelection = HeaderData.map(obj =>
   new MenuCategory(obj.id, obj.title, obj.items))
 
-
-console.log(burgerMenuSelection);
 
 
 
@@ -127,9 +127,9 @@ function toggleCategory(id) {
                 <ul v-if="openCategory === categoryItem.id" class="burgermenu__section__boks" aria-label="informations boks">
                   <li v-for="item in categoryItem.items" :key="item.id" class="burgermenu__section__listitem">
                     <RouterLink :to="item.url" class="burgermenu__links">{{ item.title }}</RouterLink>
-                    <ul v-if="item.items.length > 0" aria-label="underpunkter">
-                      <li v-for="Item in item.items" :key="Item.id" class="burgermenu__section__listitem__inner">
-                        <RouterLink :to="Item.url" class="burgermenu__links__inner">{{ Item.title }}</RouterLink>
+                    <ul v-if="openCategory === categoryItem.id">
+                      <li v-for="item in item.items" :key="item.id" class="burgermenu__section__listitem__inner">
+                        <RouterLink :to="item.url" class="burgermenu__links__inner">{{ item.title }}</RouterLink>
                       </li>
                     </ul>
                   </li>
@@ -141,12 +141,7 @@ function toggleCategory(id) {
 
           <h2 class="burgermenu__service__overskrift">HAR DU BRUG FOR HJÆLP?</h2>
 
-          <div v-for="section in burgerMenuHelp" :key="section.id" class="burgermenu__sektion__service" @click="toggleMenu"
-             aria-label="burgermenu punkter">
-              <button class="burgermenu__section__service--button" @click="toggleSection(section.id)" aria-label="åben/luk felt">
-                 {{ section.title }}
-              </button>
-          </div>
+
         </nav>
 
         <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
