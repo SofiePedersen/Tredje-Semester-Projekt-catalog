@@ -1,0 +1,31 @@
+[
+      { "title": "Klub Faraos",
+  "id": 10,
+  "items": [
+    { "title": "Bliv medlem", "url": "#" },
+    { "title": "Fordele & bonuspoint", "url": "#" },
+    { "title": "point & belønninger", "url": "#" },
+    { "title": "Events & tuneringer", "url": "#" },
+    { "title": "Klubregler / FAQ", "url": "#" }
+  ]},
+  { "title": "Nyheder",
+  "id": 20,
+  "items": [
+    { "title": "Nye produkter", "url": "#" },
+    { "title": "Kommende udgivelser", "url": "#" },
+    { "title": "Artikler & anmeldelser", "url": "#" },
+    { "title": "Events & arrangementer", "url": "#" },
+    { "title": "Presse / blog", "url": "#" }
+  ]
+  },
+  { "title": "Tilbud",
+  "id": 30,
+  "items": [
+    { "title": "Aktuelle kampagner", "url": "#" },
+    { "title": "Udsalg", "url": "#" },
+    { "title": "Outlet / Restlager", "url": "#" },
+    { "title": "Klubtilbud (kun for medlemmer)", "url": "#" },
+    { "title": "Sidste chance", "url": "#" }
+  ]
+  }
+]
