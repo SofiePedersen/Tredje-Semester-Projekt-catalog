@@ -1,5 +1,5 @@
 [
-      { "title": "Klub Faraos",
+      { "title": "KLUB FARAOS",
   "id": 10,
   "items": [
     { "title": "Bliv medlem", "url": "#" },
@@ -8,7 +8,7 @@
     { "title": "Events & tuneringer", "url": "#" },
     { "title": "Klubregler / FAQ", "url": "#" }
   ]},
-  { "title": "Nyheder",
+  { "title": "NYHEDER",
   "id": 20,
   "items": [
     { "title": "Nye produkter", "url": "#" },
@@ -18,7 +18,7 @@
     { "title": "Presse / blog", "url": "#" }
   ]
   },
-  { "title": "Tilbud",
+  { "title": "TILBUD",
   "id": 30,
   "items": [
     { "title": "Aktuelle kampagner", "url": "#" },

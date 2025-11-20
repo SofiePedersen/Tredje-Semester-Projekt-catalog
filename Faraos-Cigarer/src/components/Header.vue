@@ -93,7 +93,7 @@ console.log(burgerMenuSelection)
 
         <div class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
           <button class="burgermenu__section--button" @click="toggleSection(categoryId)" aria-label="åben/luk felt">
-                {{ "Kategorier" }}
+                {{ "KATEGORIER" }}
               <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === categoryId }" class="burgermenu__ikon"
               aria-label="åben/luk pil" />
             </button>
