@@ -97,7 +97,7 @@ console.log(burgerMenuSelection)
               <FontAwesomeIcon :icon="faAngleDown" :class="{ 'rotate-180': openSection === categoryId }" class="burgermenu__ikon"
               aria-label="åben/luk pil" />
             </button>
-          <ul v-if="openSection === categoryId" id="menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
+          <ul v-if="openSection === categoryId" id="header__menu" class="header__hammenu__list" aria-label="burgermenu liste"> 
             <li v-for="categoryItem in burgerMenuSelection" :key="categoryItem.id" class="burgermenu__sektion" @click="toggleMenu" aria-label="burgermenu punkter">
             <button class="burgermenu__section__inner--button" @click="toggleCategory(categoryItem.id)" aria-label="åben/luk felt">
                 {{ categoryItem.title }}
@@ -181,6 +181,10 @@ console.log(burgerMenuSelection)
   flex-direction: column;
   transition: .3s ease;
   z-index: 1;
+}
+
+li:hover {
+  text-decoration: underline;
 }
 
 .burgermenu__wrapper {
@@ -318,6 +322,10 @@ console.log(burgerMenuSelection)
   font-family: $font-boogaloo;
   background-color: $color-anubis-black;
   cursor: pointer;
+}
+
+.burgermenu__section--button:nth-of-type(4) {
+  color: $color-pharaos-gold;
 }
 
 .burgermenu__section__service{
@@ -540,6 +548,9 @@ console.log(burgerMenuSelection)
   cursor: pointer;
 }
 
+.burgermenu__section__inner--button:hover {
+  text-decoration: underline;
+}
 
 @media (min-width: 800px) {
   header {

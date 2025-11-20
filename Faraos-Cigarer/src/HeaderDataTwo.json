@@ -19,7 +19,7 @@
   ]
   },
   { "title": "TILBUD",
-  "id": 30,
+  "id": "tilbud",
   "items": [
     { "title": "Aktuelle kampagner", "url": "#" },
     { "title": "Udsalg", "url": "#" },
