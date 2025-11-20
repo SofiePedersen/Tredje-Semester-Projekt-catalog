@@ -525,8 +525,6 @@ console.log(burgerMenuSelection)
   margin-left: 2rem
 }
 
-
-
 .burgermenu__section__inner--button {
   background: none;
   border: none;
