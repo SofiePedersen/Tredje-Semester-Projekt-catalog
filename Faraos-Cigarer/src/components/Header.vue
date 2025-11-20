@@ -204,14 +204,6 @@ console.log(burgerMenuSelection)
     background-image: reverse;
 }
 
-
-#menu {
-    list-style: none;
-    font-family: "play";
-}
-
-
-
 .header__hammenu__searchtag:link, .header__hammenu__searchtag:visited, .header__hammenu__searchtag:hover, .header__hammenu__searchtag:active { 
     color: white; 
     text-decoration: none;
@@ -222,16 +214,16 @@ console.log(burgerMenuSelection)
 }
 
 .ham-menu {
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;
+    width: 3.125rem; 
     margin: auto;
     position: relative;
     background-color: black;
 }
 
 .ham-menu__burgermenu {
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;
+    width: 3.125rem;
     margin-right: 2rem;
     position: relative;
     background-color: black;
@@ -239,7 +231,7 @@ console.log(burgerMenuSelection)
 
 
 .ham-menu__burgermenu span{
-    height: 2px;
+    height: 0.125rem;
     width: 70%;
     background-color: white;
     border-radius: 25px;
@@ -252,7 +244,7 @@ console.log(burgerMenuSelection)
 }
 
 .ham-menu span{
-    height: 2px;
+    height: 0.125rem;
     width: 70%;
     background-color: white;
     border-radius: 25px;
@@ -390,8 +382,8 @@ console.log(burgerMenuSelection)
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10px; 
-  margin-top: 10px;
+  gap: 0.625rem; 
+  margin-top: 0.625rem;
   margin-bottom: 5%;
 }
 
@@ -408,14 +400,14 @@ console.log(burgerMenuSelection)
 .header__logo__burgermenu {
   display: flex;
   justify-content: center;
-  width:  290px;
+  width:  18.125rem;
   height: auto;
   padding-bottom: 1rem;
 }
 
 #searchform {
   background: grey;
-  border-radius: 25px;
+  border-radius: 1.262rem;
   width: 60%;
   position: relative;
   display: flex;
@@ -426,42 +418,42 @@ console.log(burgerMenuSelection)
   width: 100%;
   height: 100%;
   display: block;
-  border-width: 3px;
-  font-size: 24px;
-  padding: 8px 40px 8px 20px;
-  border: 2px solid $color-anubis-black;
+  border-width: 0.1875rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 1.25rem;
+  border: 0.125rem solid $color-anubis-black;
 }
 
 .header__input__burgermenu {
   width: 100%;
   display: block;
-  border-width: 3px;
-  font-size: 24px;
-  padding: 8px 40px 8px 20px;
-  border: 2px solid $color-anubis-black;
+  border-width: 0.1875rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 1.25rem;
+  border: 0.125rem solid $color-anubis-black;
 }
 
 .header__icon__search {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 0.625rem;
   transform: translateY(-50%);
   background: none;
   border: none;
   color: black;
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
 .header__icon__search__burgermenu {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 0.625rem;
   transform: translateY(-50%);
   background: none;
   border: none;
   color: black;
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
@@ -476,29 +468,29 @@ console.log(burgerMenuSelection)
 }
 
 .header__icon__basket {
-  height: 50px;
-  width: 50px;
-  padding-top: 5px;
+  height: 3.125rem;
+  width: 3.125rem;
+  padding-top: 0.3125rem;
   margin-left: auto;
   margin-right: auto;
   border: none;
   position: relative;
   background-color: black;
   color: white;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .header__icon__basket__burgermenu {
-  height: 50px;
-  width: 50px;
-  padding-top: 5px;
+  height: 3.125rem;
+  width: 3.125rem;
+  padding-top: 0.3125rem;
   margin-left: auto;
   margin-right: auto;
   border: none;
   position: relative;
   background-color: black;
   color: white;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .burgermenu__buttons {
