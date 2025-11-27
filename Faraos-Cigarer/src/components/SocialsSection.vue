@@ -8,26 +8,46 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 <template>
   <div class="socials-section" aria-label="Følg os på sociale medier">
-    <a class="socials-section__facebook" href="https://www.facebook.com/faraoscigarer" target="_blank"
-      rel="noopener noreferrer" :aria-label="'Følg Faraos Cigarer på Facebook'">
+    <a
+      class="socials-section__facebook"
+      href="https://www.facebook.com/faraoscigarer"
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på Facebook'"
+    >
       <FontAwesomeIcon :icon="faFacebook" />
       <p>FACEBOOK</p>
     </a>
 
-    <a class="socials-section__instagram" href="https://www.instagram.com/faraoscigarer/" target="_blank"
-      rel="noopener noreferrer" :aria-label="'Følg Faraos Cigarer på Instagram'">
+    <a
+      class="socials-section__instagram"
+      href="https://www.instagram.com/faraoscigarer/"
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på Instagram'"
+    >
       <FontAwesomeIcon :icon="faInstagram" />
       <p>INSTAGRAM</p>
     </a>
 
-    <a class="socials-section__tiktok" href="https://www.tiktok.com/@faraoscigarer" target="_blank"
-      rel="noopener noreferrer" :aria-label="'Følg Faraos Cigarer på TikTok'">
+    <a
+      class="socials-section__tiktok"
+      href="https://www.tiktok.com/@faraoscigarer"
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på TikTok'"
+    >
       <FontAwesomeIcon :icon="faTiktok" />
       <p>TIKTOK</p>
     </a>
 
-    <a class="socials-section__twitter" href="https://x.com/FaraosCigarer" target="_blank" rel="noopener noreferrer"
-      :aria-label="'Følg Faraos Cigarer på Twitter'">
+    <a
+      class="socials-section__twitter"
+      href="https://x.com/FaraosCigarer"
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="'Følg Faraos Cigarer på Twitter'"
+    >
       <FontAwesomeIcon :icon="faXTwitter" />
       <p>TWITTER</p>
     </a>
@@ -56,7 +76,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
   height: 5rem;
   background-color: $color-pharaos-gold;
   color: $color-newspaper-white;
-  -webkit-text-stroke: 0.07rem $color-anubis-black;
+  -webkit-text-stroke: 0.1rem $color-anubis-black;
   font-family: $font-boogaloo;
   font-size: 2.44rem;
   cursor: pointer;
@@ -85,7 +105,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
   height: 5rem;
   background-color: $color-pharaos-gold;
   color: $color-newspaper-white;
-  -webkit-text-stroke: 0.07rem $color-anubis-black;
+  -webkit-text-stroke: 0.1rem $color-anubis-black;
   font-family: $font-boogaloo;
   font-size: 2.44rem;
   cursor: pointer;
@@ -98,7 +118,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 .socials-section__instagram :deep(svg),
 .socials-section__twitter :deep(svg) {
   stroke: $color-anubis-black;
-  stroke-width: 0.5rem;
+  stroke-width: 1rem;
 }
 
 @media (min-width: 601px) {
@@ -132,7 +152,6 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 }
 
 @media (min-width: 1200px) {
-
   .socials-section__facebook,
   .socials-section__instagram,
   .socials-section__tiktok,

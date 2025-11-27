@@ -11,7 +11,11 @@ import SocialsSection from "./SocialsSection.vue";
 
     <div class="community-section__e-label" aria-label="E-mærket knap">
       <p>FARAOS ER E-MÆRKET</p>
-      <img :src="Community2" alt="Hjemmesiden er e-mærket" aria-label="Hjemmesiden er e-mærket" />
+      <img
+        :src="Community2"
+        alt="Hjemmesiden er e-mærket"
+        aria-label="Hjemmesiden er e-mærket"
+      />
     </div>
 
     <div class="community-section__news" aria-label="Nyheder knap">
@@ -93,7 +97,7 @@ import SocialsSection from "./SocialsSection.vue";
   font-family: $font-boogaloo;
   -webkit-text-stroke: 0.1rem $color-anubis-black;
   font-size: 2.44rem;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -125,7 +129,7 @@ import SocialsSection from "./SocialsSection.vue";
   .community-section__e-label {
     font-size: 1.9rem;
   }
-  
+
   .community-section__news {
     background-color: $color-anubis-black;
     color: $color-pharaos-gold;
@@ -144,7 +148,7 @@ import SocialsSection from "./SocialsSection.vue";
 }
 
 @media (min-width: 1200px) {
-    .community-section {
+  .community-section {
     padding: 15rem;
     padding-top: 0rem;
     padding-bottom: 4rem;
