@@ -33,7 +33,7 @@
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      titel="Danmarks kort faraos cigarer Odense"
+      title="Danmarks kort faraos cigarer Odense"
     ></iframe>
   </div>
 </template>
