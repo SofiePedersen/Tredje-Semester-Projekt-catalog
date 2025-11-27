@@ -88,10 +88,10 @@ console.log(burgerMenuSelection)
               </div>
               <form id="searchform">
                 <input class="header__input__burgermenu" type="text" placeholder="" aria-label="søgefelt"/>
-                <button class="header__icon__search__burgermenu"><FontAwesomeIcon :icon="faMagnifyingGlass" aria-label="søgikon"/></button>
+                <button class="header__icon__search__burgermenu" aria-label="søgikon"><FontAwesomeIcon :icon="faMagnifyingGlass"/></button>
               </form>
               <div class="header__icon__burgermenu">
-                <button class="header__icon__basket__burgermenu"><FontAwesomeIcon :icon="faCartShopping" aria-label="indkøbskurv" /></button>
+                <button class="header__icon__basket__burgermenu" aria-label="indkøbskurv"><FontAwesomeIcon :icon="faCartShopping"/></button>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ console.log(burgerMenuSelection)
 
         </nav>
 
-        <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu" aria-label="burgermenu knap">
+        <div class="ham-menu" :class="{ active: isMenuActive }" @click="togglemenu">
           <span></span>
           <span></span>
           <span></span>
