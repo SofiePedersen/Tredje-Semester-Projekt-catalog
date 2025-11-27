@@ -186,6 +186,7 @@ console.log(burgerMenuSelection)
   flex-direction: column;
   transition: .3s ease;
   z-index: 1;
+  overflow-y: scroll;
 }
 
 .burgermenu__wrapper {
