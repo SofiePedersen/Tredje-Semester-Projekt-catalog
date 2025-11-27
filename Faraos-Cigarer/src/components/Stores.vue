@@ -63,7 +63,7 @@ function toggleSection(id) {
       </RouterLink>
     </nav>
 
-    <div class="map-container" aria-label="Google maps over butikkens lokation">
+    <div class="map-container">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d577050.2589892185!2d10.37101225287178!3d55.60022845645195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sFaraos%20Cigarer!5e0!3m2!1sda!2sdk!4v1762941964703!5m2!1sda!2sdk"
         width="100%"
@@ -72,6 +72,7 @@ function toggleSection(id) {
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
+        title="Danmarks kort faraos butikker"
       ></iframe>
     </div>
 
