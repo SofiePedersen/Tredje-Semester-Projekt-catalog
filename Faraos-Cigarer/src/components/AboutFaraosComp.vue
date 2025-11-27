@@ -10,7 +10,7 @@ const isExpanded = ref(false);
     aria-label="Tekstboks omhandlende Faraos Cigarers opstart"
   >
     <h2>LIDT OM FARAOS</h2>
-    <div class="about-content" aria-label="Tekstboksen">
+    <div class="about-content">
       <!-- Dynamic class binding -->
       <div
         class="mobile-text"
