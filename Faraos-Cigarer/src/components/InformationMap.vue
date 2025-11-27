@@ -24,7 +24,7 @@
     >
   </nav>
 
-  <div class="map-container" aria-label="Google maps over butikkens lokation">
+  <div class="map-container">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.642260674874!2d10.38035027706906!3d55.39705671933529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cdff9c0d87ce7%3A0x1ec4b00069831865!2sFaraos%20Cigarer!5e1!3m2!1sen!2sdk!4v1762941660760!5m2!1sen!2sdk"
       width="100%"
@@ -33,6 +33,7 @@
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
+      titel="Danmarks kort faraos cigarer Odense"
     ></iframe>
   </div>
 </template>
