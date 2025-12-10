@@ -4,6 +4,7 @@ import Promosection from "@/components/PromoSection.vue";
 import CommunitySection from "@/components/CommunitySection.vue";
 import AboutFaraosComp from "@/components/AboutFaraosComp.vue";
 import DesktopSlideshow from "@/components/DesktopSlideshow.vue";
+import CatalogSection from "@/components/CatalogSection.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import DesktopSlideshow from "@/components/DesktopSlideshow.vue";
     <DesktopSlideshow />
     <h2>UDFORSK FARAOS UNIVERS</h2>
     <Promosection />
+    <CatalogSection />
     <h2>FARAOS FÆLLESKAB</h2>
     <CommunitySection />
     <AboutFaraosComp />
