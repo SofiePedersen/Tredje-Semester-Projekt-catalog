@@ -1,15 +1,41 @@
 <script setup>
-const products = [
-    { image: '#', name: 'Product 1', price: 'DKK 300', status: 5 },
-    { image: '#', name: 'Product 2', price: 'DKK 67', status: 2 },
-    { image: '#', name: 'Product 3', price: 'DKK 400', status: 8 },
-    { image: '#', name: 'Product 4', price: 'DKK 280', status: 1 },
-    { image: '#', name: 'Product 5', price: 'DKK 99', status: 12 },
-    { image: '#', name: 'Product 6', price: 'DKK 125', status: 3 },
-    { image: '#', name: 'Product 7', price: 'DKK 200', status: 7 },
-    { image: '#', name: 'Product 8', price: 'DKK 48', status: 4 }
-]
+import batman from '@/assets/image/batman-comic-png.jpg';
+import vildkatten from '@/assets/image/vildkatten-game-png.webp';
+import catan from '@/assets/image/catan_en.webp';
+import spots from '@/assets/image/spots-board-game.jpg';
+import { ref, onMounted, onUnmounted } from "vue";
+
+// const products = [
+//     { image: vildkatten, name: 'Vildkatten - børneudgave', price: 'DKK 300', status: 5 },
+//     { image: batman, name: 'Batman comics - fuld sæt', price: 'DKK 67', status: 2 },
+//     { image: catan, name: 'Catan - brætspil', price: 'DKK 400', status: 8 },
+//     { image: spots, name: 'Spots! - hunde brætspil', price: 'DKK 280', status: 1 },
+//     { image: catan, name: 'Catan - brætspil', price: 'DKK 400', status: 8 },
+//     { image: spots, name: 'Spots! - hunde brætspil', price: 'DKK 280', status: 1 },
+//     { image: batman, name: 'Batman comics - fuld sæt', price: 'DKK 67', status: 2 },
+// ]
+
+
+const products = ref([])
+
+onMounted(async () => {
+  try {
+    const res = await fetch('https://best-bud-db-default-rtdb.europe-west1.firebasedatabase.app/faraos/products.json');
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch pets');
+    }
+
+    const data = await res.json();
+    products.value = data;
+
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 </script>
+
 <template>
     <div class="wrapper">
         <h2>PRODUKT KATALOG</h2>
@@ -22,6 +48,8 @@ const products = [
                 <button class="add-btn">Tilføj</button>
             </div>
         </div>
+        <a href="#" class="showmore">Fandt du ikke dét du søgte?</a><br>
+        <a href="#" class="showmore">Klik her for at se mere</a>
     </div>
 </template>
 
@@ -30,12 +58,15 @@ const products = [
 @import "../assets/main.scss";
 
 .wrapper {
-    background-color: red;
+    background-color: $color-pharaos-gold;
     padding-left: 15rem;
     padding-right: 15rem;
+    padding-bottom: 3rem;
 
     h2 {
+        padding-top: 2.5rem;
         padding-left: 0;
+        color: $color-newspaper-white;
     }
 
     p, h3 {
@@ -48,10 +79,12 @@ const products = [
     flex-wrap: wrap;
     gap: 1.5rem;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .card {
     flex: 1 1 calc(25% - 1.5rem);
+    height: 500px;
     box-sizing: border-box;
     padding: 1rem;
     background: #ffffff;
@@ -63,6 +96,7 @@ const products = [
 
 .card img {
     width: 100%;
+    height: 60%;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -81,7 +115,7 @@ const products = [
 
 .status {
     font-size: 0.9rem;
-    color: #007b00;
+    color: #157915;
     margin-bottom: 1rem;
 }
 
@@ -93,6 +127,21 @@ const products = [
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
+}
+
+.showmore {
+    color: $color-anubis-black;
+    font-family: $font-play;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.showmore:last-of-type {
+    text-decoration: underline;
+}
+
+.showmore:last-of-type:hover {
+    color: $color-tactical-blue;
 }
 
 .add-btn:hover {
